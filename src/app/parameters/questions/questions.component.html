@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="container">
+            <div *ngIf="selectedParameter">
+                <h3>{{selectedParameter.name}}</h3>
+                <p>{{selectedParameter.description}}</p>
+                <div *ngFor="let question of selectedParameter.questions">
+                    <p>{{question.title}}</p>
+                    <label>Bajo</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="{{question.id}}" id="inlineRadio1" value="1"
+                            (click)="setQuestionValue(1, question.id)" [checked]="question.value == 1">
+                        <label class="form-check-label" for="inlineRadio1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="{{question.id}}" id="inlineRadio2" value="2"
+                            (click)="setQuestionValue(2, question.id)" [checked]="question.value == 2">
+                        <label class="form-check-label" for="inlineRadio2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="{{question.id}}" id="inlineRadio2" value="3"
+                            (click)="setQuestionValue(3, question.id)" [checked]="question.value == 3">
+                        <label class="form-check-label" for="inlineRadio2">3</label>
+                    </div>
+                    <label>Alto</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

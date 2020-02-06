@@ -1,0 +1,471 @@
+{
+    "appTitle": "BMS",
+    "sections": [
+        {
+            "name": "Sección I: Estrategia General",
+            "description" : "En esta Sección se valoran los elementos relacionados a la estrategia general del negocio.  Incluye la competencia,  mercado actual, posicionamiento y gestión estratégica",
+            "completed": false,
+            "parameters" : [
+                {
+                    "name" : "Competencia",
+                    "description": "Identificar las características principales de la firmas que compiten en el mismo mercado con ofertas similares.  Estas pueden ser nacionales o extranjeras.",
+                    "notes": "",
+                    "completed": false,
+                    "questions" : [
+                        {
+                            "id" : "s1p1q1",
+                            "title" : "Ha identificado claramente a todas o la mayoría de firmas nacionales o extranjeras.",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s1p1q2",
+                            "title" : "Tiene un conocimiento amplio y documentado de las estrategias de otras firmas competidoras ",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s1p1q3",
+                            "title" : "Monitorea a potenciales firmas competidoras en el mercado que podrían, en el futuro, ingresar al mercado objetivo",
+                            "value" : 0
+                        }
+                    ]
+                },
+                {
+                    "name" : "Mercado actual",
+                    "description": "Describe el mercado actual en el cual compite el negocio.  Considera las tres categorías de clientes: actuales, de la competencia y los no clientes (aquellos que todavía no compran).",
+                    "notes": "",
+                    "completed": false,
+                    "questions" : [
+                        {
+                            "id" : "s1p2q1",
+                            "title" : "Dispone de una identificación clara de sus compradores objetivos y sabe cómo llegar a ellos",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s1p2q2",
+                            "title" : "Tiene un conocimiento amplio y documentado de las necesidades de los clientes objetivo",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s1p2q3",
+                            "title" : "Maneja información suficiente sobre los deseos y requerimientos específicos de los clientes objetivo ",
+                            "value" : 0
+                        }
+                    ]
+                },
+                {
+                    "name" : "Posicionamiento",
+                    "description": "Describe la valoración sobre la marca del producto o servicio en el mercado; debe revelar la propuesta de valor del negocio, su elemento diferenciador.",
+                    "notes": "",
+                    "completed": false,
+                    "questions" : [
+                        {
+                            "id" : "s1p3q1",
+                            "title" : "Presenta una combinación eficaz de las características del producto (servicio), la calidad, el precio y la entrega, de forma tal, que satisface ampliamente las necesidades, deseos y expectativas de los clientes objetivo ",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s1p3q2",
+                            "title" : "Dispone de una diseño que combina las características del producto (servicio), la calidad, el precio y la entrega de tal manera que es diferente y superior que la competencia",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s1p3q3",
+                            "title" : "Realiza esfuerzos conscientes para innovar su oferta a fin de fidelizar sus mercados actuales o alcanzar nuevos que no han sido explotados. ",
+                            "value" : 0
+                        }
+                    ]
+                },
+                {
+                    "name" : "Gestión Estratégica",
+                    "description": "Describe la capacidad del negocio para planificar, adquirir y controlar los recursos necesarios para la gestión estratégica",
+                    "notes": "",
+                    "completed": false,
+                    "questions" : [
+                        {
+                            "id" : "s1p4q1",
+                            "title" : "Dispone del nivel de información y conocimientos adecuados para la gestión estratégica",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s1p4q2",
+                            "title" : "Cuenta con el nivel de recursos humanos apropiados para la gestión estratégica",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s1p4q3",
+                            "title" : "Maneja el nivel de recursos materiales y financieros suficiente y adecuado para la gestión estratégica",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s1p4q4",
+                            "title" : "Dispone de la red de contactos adecuada para la gestión estratégica",
+                            "value" : 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Sección II: Producción",
+            "description" : "En esta Sección se valoran los elementos relacionados a la función de producción del negocio.  Incluye cantidad, calidad, tiempo, costo y gestión de la producción",
+            "completed": false,
+            "parameters" : [
+                {
+                    "name" : "Cantidad",
+                    "description": "Describiremos la situación de las decisiones para alcanzar la cantidad de producción requerida sin afectar los objetivos de calidad, tiempo y costo.",
+                    "notes": "",
+                    "completed": false,
+                    "questions" : [
+                        {
+                            "id" : "s2p1q1",
+                            "title" : "El diseño y la instalación de la planta son suficientes y adecuados",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s2p1q2",
+                            "title" : "El diseño de los procesos de producción es apropiado",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s2p1q3",
+                            "title" : "La ubicación de la planta es conveniente y facilita la producción.",
+                            "value" : 0
+                        }
+                    ]
+                },
+                {
+                    "name" : "Calidad",
+                    "description": "Describiremos la situación de las decisiones para alcanzar el nivel de calidad de producción requerido sin afectar los objetivos de cantidad, tiempo y costo.",
+                    "notes": "",
+                    "completed": false,
+                    "questions" : [
+                        {
+                            "id" : "s2p2q1",
+                            "title" : "Los estándares de calidad son suficientes y adecuados para alcanzar los objetivos.",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s2p2q2",
+                            "title" : "Los procedimientos de control de calidad son efectivos y contribuyen a lograr los objetivos",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s2p2q3",
+                            "title" : "Los servicios de pre y posventa son apropiados para lograr y complementar la calidad de los productos (servicios) ofrecidos.",
+                            "value" : 0
+                        }
+                    ]
+                },
+                {
+                    "name" : "Tiempo",
+                    "description": "Describiremos la situación de las decisiones para lograr los tiempos de producción adecuados sin afectar los objetivos de cantidad, calidad y costo.",
+                    "notes": "",
+                    "completed": false,
+                    "questions" : [
+                        {
+                            "id" : "s2p3q1",
+                            "title" : "Las necesidades de inventario son determinadas de manera apropiada y eficaz.",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s2p3q2",
+                            "title" : "Los métodos de manejos de materiales, procedimientos y equipos son adecuados para alcanzar los objetivos.",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s2p3q3",
+                            "title" : "Las actividades compra (materiales, partes, suministros, etc.) y entrega de productos (servicios) terminados se realizan de forma efectiva.",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s2p3q4",
+                            "title" : "Dispone de procedimientos para mantener reservas de inventario para lograr los objetivos.",
+                            "value" : 0
+                        }
+                    ]
+                },
+                {
+                    "name" : "Costos",
+                    "description": "Describiremos la situación de las decisiones para lograr costos de producción adecuados sin afectar los objetivos de cantidad, calidad y tiempo.",
+                    "notes": "",
+                    "completed": false,
+                    "questions" : [
+                        {
+                            "id" : "s2p4q1",
+                            "title" : "Dispone de la capacidad para nivelar la producción a fin de alcanzar los objetivos.",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s2p4q2",
+                            "title" : "Los sistemas de mantenimiento son adecuados para lograr los objetivos.",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s2p4q3",
+                            "title" : "Las técnicas de mejora de métodos son las correctas para cumplir los objetivos.",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s2p4q4",
+                            "title" : "Cuenta con la capacidad para instaurar programas de reducción de costos para lograr los objetivos.",
+                            "value" : 0
+                        }
+                    ]
+                },
+                {
+                    "name" : "Gestión de la Producción",
+                    "description": "Describe la capacidad del negocio para planificar, adquirir y controlar los recursos necesarios para la gestión de la producción.",
+                    "notes": "",
+                    "completed": false,
+                    "questions" : [
+                        {
+                            "id" : "s2p5q1",
+                            "title" : "Dispone del nivel de información y conocimientos adecuados para la gestión de la producción.",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s2p5q2",
+                            "title" : "Cuenta con el nivel de recursos humanos apropiados para la gestión de la producción.",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s2p5q3",
+                            "title" : "Maneja el nivel de recursos materiales y financieros suficiente y adecuado para la gestión de la producción.",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s2p5q4",
+                            "title" : "Dispone de la red de contactos adecuada para la gestión de la producción.",
+                            "value" : 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Sección III: Marketing",
+            "description" : "En esta Sección se valoran los elementos relacionados a la función de marketing del negocio.  Incluye comunicación, distribución y gestión de marketing",  
+            "completed": false,
+            "parameters" : [
+                {
+                    "name" : "Comunicación",
+                    "description": "Describe la situación de las decisiones de comunicación del negocio para completar y complementar la oferta a los compradores deseados.",
+                    "notes": "",
+                    "completed": false,
+                    "questions" : [
+                        {
+                            "id" : "s3p1q1",
+                            "title" : "Elabora la literatura de ventas suficiente y apropiada",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s3p1q2",
+                            "title" : "Desarrolla programas de promoción atractivos y eficaces.",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s3p1q3",
+                            "title" : "Realiza programas de publicidad apropiados y efectivos",
+                            "value" : 0
+                        }
+                    ]
+                },
+                {
+                    "name" : "Distribución",
+                    "description": "Describe la situación de las decisiones de distribución del negocio para entregar la oferta a los compradores deseados.",
+                    "notes": "",
+                    "completed": false,
+                    "questions" : [
+                        {
+                            "id" : "s3p2q1",
+                            "title" : "Dispone de canales de distribución suficientes y adecuados",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s3p2q2",
+                            "title" : "Cuenta con los puntos o establecimiento de ventas suficientes y apropiados.",
+                            "value" : 0
+                        }                       
+                    ]
+                },
+                {
+                    "name" : "Gestión de Marketing",
+                    "description": "Describe la capacidad del negocio para planificar, adquirir y controlar los recursos necesarios para la gestión de  marketing.",
+                    "notes": "",
+                    "completed": false,
+                    "questions" : [
+                        {
+                            "id" : "s3p3q1",
+                            "title" : "Dispone del nivel de información y conocimientos adecuados para la gestión de marketing.",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s3p3q2",
+                            "title" : "Cuenta con el nivel de recursos humanos apropiados para la gestión de marketing.",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s3p3q3",
+                            "title" : "Maneja el nivel de recursos materiales y financieros suficiente y adecuado para la gestión de marketing.",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s3p3q4",
+                            "title" : "Dispone de la red de contactos adecuada para la gestión de marketing.",
+                            "value" : 0
+                        }                       
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Sección IV: Transacciones",
+            "description" : "En esta Sección se valoran los elementos relacionados al ciclo transaccional del negocio.  Incluye obtener y entregar pedidos, y gestión de las transacciones.",  
+            "completed": false,
+            "parameters": [
+                {
+                    "name" : "Obtención de pedidos",
+                    "description": "Describe la situación de las decisiones para la obtención de pedidos del negocio para cumplir con los requerimientos de los compradores.",
+                    "notes": "",
+                    "completed": false,
+                    "questions" : [
+                        {
+                            "id" : "s4p1q1",
+                            "title" : "La prospección y atención a solicitudes de ventas es suficiente y adecuada.",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s4p1q2",
+                            "title" : "La preparación de especificaciones y negociación es efectiva.",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s4p1q3",
+                            "title" : "La fijación de precios y cotización se realiza de manera eficiente.",
+                            "value" : 0
+                        }
+                    ]
+                },
+                {
+                    "name" : "Entrega de pedidos",
+                    "description": "Describe la situación de las decisiones para la entrega de pedidos del negocio para cumplir con los requerimientos de los compradores.",
+                    "notes": "",
+                    "completed": false,
+                    "questions" : [
+                        {
+                            "id" : "s4p2q1",
+                            "title" : "La estimación de costos de producción es conforme las normas y prácticas aceptadas.",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s4p2q2",
+                            "title" : "El despacho y distribución de los trabajos permite iniciar las actividades de producción y los movimientos de materiales y herramientas.",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s4p2q3",
+                            "title" : "La programación y secuencia del trabajo permite decidir cuándo y dónde deben producirse las solicitudes y trasladar las piezas o los productos.",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s4p2q4",
+                            "title" : "Los fletes y transporte aseguran la entrega y distribución física del pedido de forma efectiva y eficiente.",
+                            "value" : 0
+                        }
+                    ]
+                },
+                {
+                    "name" : "Gestión de Transacciones",
+                    "description": "Describe la capacidad del negocio para planificar, adquirir y controlar los recursos necesarios para la gestión de  transaccional.",
+                    "notes": "",
+                    "completed": false,
+                    "questions" : [
+                        {
+                            "id" : "s4p3q1",
+                            "title" : "Dispone del nivel de información y conocimientos adecuados para la gestión transaccional.",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s4p3q2",
+                            "title" : "Cuenta con el nivel de recursos humanos apropiados para la gestión transaccional.",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s4p3q3",
+                            "title" : "Maneja el nivel de recursos materiales y financieros suficiente y adecuado para la gestión transaccional.",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s4p3q4",
+                            "title" : "Dispone de la red de contactos adecuada para la gestión transaccional.",
+                            "value" : 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Sección V: TIC",
+            "description" : "En esta Sección se valoran los elementos relacionados a las TIC  en el negocio.  Incluye el potencial y uso actual de las TIC",  
+            "completed": false,
+            "parameters": [
+                {
+                    "name" : "Potencial de las TIC",
+                    "description": "Describe el potencial de la TIC para la gestión del negocio.",
+                    "notes": "",
+                    "completed": false,
+                    "questions" : [
+                        {
+                            "id" : "s5p1q1",
+                            "title" : "Han identificado cuándo, dónde y cómo podrían beneficiarse del uso de la TIC en la gestión estratégica.",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s5p1q2",
+                            "title" : "Tienen determinado cuándo, dónde y cómo podrían beneficiarse del uso de las TIC en la gestión de la producción.",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s5p1q3",
+                            "title" : "Conocen cuándo, dónde y cómo podrían beneficiarse del uso de las TIC en la gestión de marketing.",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s5p1q4",
+                            "title" : "Han establecido cuándo, dónde y cómo podrían beneficiarse del uso de las TIC en la gestión transaccional",
+                            "value" : 0
+                        }
+                    ]
+                },
+                {
+                    "name" : "Utilización de las TIC",
+                    "description": "Describe el uso actual de la TIC para la gestión del negocio.",
+                    "notes": "",
+                    "completed": false,
+                    "questions" : [
+                        {
+                            "id" : "s5p2q1",
+                            "title" : "Han utilizado las TIC en la gestión estratégica.",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s5p2q2",
+                            "title" : "Han utilizado las TIC en la gestión de la producción.",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s5p2q3",
+                            "title" : "Han utilizado las TIC en la gestión de marketing.",
+                            "value" : 0
+                        },
+                        {
+                            "id" : "s5p2q4",
+                            "title" : "Han utilizado las TIC en la gestión transaccional.",
+                            "value" : 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

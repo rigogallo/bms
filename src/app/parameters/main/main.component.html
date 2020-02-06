@@ -1,0 +1,44 @@
+<!-- <div class="jumbotron">
+    <h1 class="display-4">Bienvenidos!</h1>
+    <p class="lead">Centro de Innovación y Emprendimineto de Nicaragua</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </p>
+  </div> -->
+
+<div class="container-fluid">
+    <div class="row">
+       <div class="container">
+        <div class="row">
+            <h2>BMS</h2>            
+        </div>
+        <div class="row">
+            <div class="content">
+                <button class="btn btn-primary" >Iniciar cuestionario</button>
+            </div>           
+        </div>
+        <div class="row mt-1 d-flex justify-content-center">               
+            <nav aria-label="Page navigation example">
+                <!-- <ul class="pagination pagination-m">                       -->
+                    <!-- <li class="page-item" *ngFor="let section of sections">
+                      <a class="btn btn-primary" (click)="loadSection(section)"> {{section.name}}</a>
+                    </li>                              -->
+
+                    <div *ngFor="let section of sections" class="btn m-3" 
+                    [ngClass]="{
+                        'btn-outline-secondary': section.completed == false,
+                        'btn-success': section.completed 
+                      }" >
+                        <a class="" (click)="loadSection(section)"> {{section.name}}</a>
+                    </div>
+                <!-- </ul> -->
+              </nav>                        
+        </div>
+        <div class="row mt-1 d-flex justify-content-center">
+            <app-sections></app-sections>
+        </div>
+       </div>
+    </div>
+</div>
