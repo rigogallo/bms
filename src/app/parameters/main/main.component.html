@@ -12,33 +12,19 @@
     <div class="row">
        <div class="container">
         <div class="row">
-            <h2>BMS</h2>            
+            <h2 class="text-center w-100 mb-3">BMS</h2>            
         </div>
         <div class="row">
-            <div class="content">
-                <button class="btn btn-primary" >Iniciar cuestionario</button>
-            </div>           
+            <!-- <div class="col-md-3">
+                <button class="btn btn-success mt-3" (click)="startEmpty()">Iniciar cuestionario</button>
+            </div> -->
+            <div class="col-md-3">
+                <button class="btn btn-primary mt-3" (click)="continueForm()">Retomar cuestionario</button>
+            </div>
+                
+            
         </div>
-        <div class="row mt-1 d-flex justify-content-center">               
-            <nav aria-label="Page navigation example">
-                <!-- <ul class="pagination pagination-m">                       -->
-                    <!-- <li class="page-item" *ngFor="let section of sections">
-                      <a class="btn btn-primary" (click)="loadSection(section)"> {{section.name}}</a>
-                    </li>                              -->
-
-                    <div *ngFor="let section of sections" class="btn m-3" 
-                    [ngClass]="{
-                        'btn-outline-secondary': section.completed == false,
-                        'btn-success': section.completed 
-                      }" >
-                        <a class="" (click)="loadSection(section)"> {{section.name}}</a>
-                    </div>
-                <!-- </ul> -->
-              </nav>                        
-        </div>
-        <div class="row mt-1 d-flex justify-content-center">
-            <app-sections></app-sections>
-        </div>
+        <app-form *ngIf="showForm" [formData]="bmsData"></app-form>
        </div>
     </div>
 </div>

@@ -1,29 +1,71 @@
-<div class="container-fluid">
+<div class="container-fluid" *ngIf="selectedParameter">
     <div class="row">
         <div class="container">
-            <div *ngIf="selectedParameter">
+            <div >
                 <h3>{{selectedParameter.name}}</h3>
+                <hr>
                 <p>{{selectedParameter.description}}</p>
-                <div *ngFor="let question of selectedParameter.questions">
+                <div *ngFor="let question of selectedParameter.questions" class="question-container">
                     <p>{{question.title}}</p>
-                    <label>Bajo</label>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="{{question.id}}" id="inlineRadio1" value="1"
-                            (click)="setQuestionValue(1, question.id)" [checked]="question.value == 1">
-                        <label class="form-check-label" for="inlineRadio1">1</label>
+                 <div class="row">
+                    <div class="col-sm-3 text-right">
+                        <label class="grade-label font-weight-bold text-danger">Bajo</label>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="{{question.id}}" id="inlineRadio2" value="2"
-                            (click)="setQuestionValue(2, question.id)" [checked]="question.value == 2">
-                        <label class="form-check-label" for="inlineRadio2">2</label>
+                    <div class="col-sm-2 text-center">
+                        <div class="form-check form-check-inline">
+                            <label class="radio">
+                                <input type="radio" name="{{question.id}}" id="inlineRadio1" value="1"
+                                (click)="setQuestionValue(1, question.id)" [checked]="question.value == 1">
+                                <span>1</span>
+                            </label>
+                            <!-- <input class="form-check-input" type="radio" name="{{question.id}}" id="inlineRadio1" value="1"
+                                (click)="setQuestionValue(1, question.id)" [checked]="question.value == 1">
+                            <label class="form-check-label" for="inlineRadio1">1</label> -->
+                        </div>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="{{question.id}}" id="inlineRadio2" value="3"
-                            (click)="setQuestionValue(3, question.id)" [checked]="question.value == 3">
-                        <label class="form-check-label" for="inlineRadio2">3</label>
+                    <div class="col-sm-2 text-center">
+                        <div class="form-check form-check-inline">
+                            <label class="radio">
+                                <input type="radio" name="{{question.id}}" id="inlineRadio2" value="2"
+                                (click)="setQuestionValue(2, question.id)" [checked]="question.value == 2">
+                                <span>2</span>
+                            </label>
+                            <!-- <input class="form-check-input" type="radio" name="{{question.id}}" id="inlineRadio2" value="2"
+                                (click)="setQuestionValue(2, question.id)" [checked]="question.value == 2">
+                            <label class="form-check-label" for="inlineRadio2">2</label> -->
+                        </div>
                     </div>
-                    <label>Alto</label>
+                    <div class="col-sm-2 text-center">
+                        <div class="form-check form-check-inline">
+                            <label class="radio">
+                                <input type="radio" name="{{question.id}}" id="inlineRadio3" value="3"
+                                (click)="setQuestionValue(3, question.id)" [checked]="question.value == 3">
+                                <span>3</span>
+                            </label>
+                            <!-- <input class="form-check-input" type="radio" name="{{question.id}}" id="inlineRadio3" value="3"
+                                (click)="setQuestionValue(3, question.id)" [checked]="question.value == 3">
+                            <label class="form-check-label" for="inlineRadio3">3</label> -->
+                        </div>
+                    </div>
+                    <div class="col-sm-3 text-left">
+                         <label class="grade-label font-weight-bold text-success">Alto</label>
+                        </div>                
+                 </div>
+                
                 </div>
+
+                <div>
+                                   
+                </div>
+
+                <div class="row">
+                    <div class="container">
+                        <div class="form-group" >
+                            <label for="exampleInputEmail1">Notas:</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>         
+                        </div>
+                    </div>
+                 </div>
             </div>
         </div>
     </div>

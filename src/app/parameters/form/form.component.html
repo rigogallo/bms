@@ -1,0 +1,69 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Correo electónico</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput2">Nombre del negocio</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput2">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput3">Actividad del Negocio</label>
+                        <select class="form-control" id="exampleFormControlInput3">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput5">País del negocio</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput5">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput5">Dirección negocio</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput5">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput4">Fecha de inicio del negocio</label>
+                        <input id="date" type="date">
+                    </div>
+                </div>  
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput6">Número de teléfono</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput6">
+                    </div>
+                </div>              
+            </div>
+            <div class="row mt-1 d-flex justify-content-center">
+                <nav aria-label="Page navigation example">
+                    <div *ngFor="let section of sections" class="btn m-3" [ngClass]="{
+                            'btn-outline-secondary': section.completed == false,
+                            'btn-success': section.completed 
+                          }">
+                        <a class="" (click)="loadSection(section)"> {{section.name}} {{section.sectionGrade}}</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="row mt-1 d-flex justify-content-center">
+                <app-sections></app-sections>
+            </div>
+        </div>
+    </div>
+</div>

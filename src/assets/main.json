@@ -1,5 +1,15 @@
 {
     "appTitle": "BMS",
+    "email" : "",
+    "usingConditions" : "El Centro de Innovación y Emprendimiento de Nicaragua (CIEN) brinda servicios al sector empresarial para mejorar la competitividad. Una línea de trabajo es el desarrollo y validación de metodologías y herramientas para el diagnóstico y planificación de la gestión de negocios. CIEN se reserva el derecho de ofrecer dichos recursos de forma pagada o gratuita parcial o totalmente. La persona que haga uso de este formulario y provea datos o información se regirá bajo las siguientes condiciones de uso: 1. Al completar adecuadamente este formulario, el único compromiso de CIEN es emitir un informe de resultados en digital el cual será remitido a la persona que suministre los datos a través del correo electrónico proporcionado. 2. La información particular (datos específicos) de una persona sobre un negocio no será compartida con terceras partes sin el consentimiento de la persona que suministra los datos. 3. La persona autoriza a CIEN a utilizar los datos para realizar análisis generales de la industria sin referirse a situaciones particulares y gozando del anonimato. 3. CIEN no está obligado a archivar o resguardar los datos recibidos.",
+    "aceptUseConditions" : false,
+    "companyName": "",
+    "companyActivity": "",
+    "companyStartDate": "",
+    "companyCountry": "",
+    "companyAddress": "",
+    "companyPhoneNumber": "",
+    "companyPersonReference": "",
     "sections": [
         {
             "name": "Sección I: Estrategia General",
