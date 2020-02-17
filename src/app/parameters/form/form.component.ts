@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import bmsParameters from "../../../assets/main.json";
 import { CommunicationService } from '../../communication.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -11,75 +12,27 @@ export class FormComponent implements OnInit {
   @Input() formData: any;
 
   selectedSection: any;
-  mainForm: any;
-  sections: any;
+  mainForm: any;  
+  aceptUseConditions = false;
 
-  constructor(private comSerive: CommunicationService) { }
+  constructor(private comSerive: CommunicationService,
+    private router: Router,) { }
 
-  ngOnInit() {
-    console.log(this.formData);
-    this.mainForm = this.formData;
-    this.sections = this.formData.sections;
+  ngOnInit() {    
+    this.mainForm = this.comSerive.getDataSession();   
+    this.aceptUseConditions = this.mainForm.aceptUseConditions;     
+    //this.comSerive.parameterSelected.emit({ parameter: this.sections[0].parameters[0], selectedSection: this.sections[0] });
+  } 
 
-    this.comSerive.questionChecked.subscribe(data => {
-      //this.saveQuestion(data);
-      this.updateForm(data);
-    });
-    //this.comSerive.sectionSelected.emit(this.selectedSection);
-    this.comSerive.parameterSelected.emit({ parameter: this.sections[0].parameters[0], selectedSection: this.sections[0] });
+  userAceptUseConditions(){
+    this.aceptUseConditions = !this.aceptUseConditions;
+    this.mainForm.aceptUseConditions = this.aceptUseConditions;
+    this.comSerive.saveDataSession(this.mainForm);
   }
 
-  loadSection(section) {
-    this.selectedSection = section;
-    this.comSerive.sectionSelected.emit(section);
-    this.comSerive.parameterSelected.emit({ parameter: section.parameters[0], selectedSection: this.selectedSection });
-  }
-
-  updateForm(data) {
-    this.mainForm.sections.forEach(section => {
-      if (section.name == data.section.name) {
-        let parameterCount = section.parameters.length;
-        let completedParameters = 0;    
-        let sectionPoints = 0;    
-
-        section.parameters.forEach(parameter => {
-          if (parameter.name == data.parameter.name) {
-            let questionCount = parameter.questions.length;
-            let answeredQuestions = 0;
-            let parameterPoints = 0;            
-
-            parameter.questions.forEach(question => {
-              if (question.id == data.questionId) {
-                question.value = data.questionValue;
-                answeredQuestions += 1;
-                parameterPoints += data.questionValue                
-              }
-              else if (question.value > 0) {
-                answeredQuestions += 1;
-                parameterPoints += question.value;                
-              }
-            });
-            if (questionCount == answeredQuestions) {
-              parameter.completed = true;
-              completedParameters += 1;
-              parameter.parameterGrade = parameterPoints/questionCount;
-              sectionPoints += parameter.parameterGrade;
-            }                      
-          }
-          else if (parameter.completed) {
-            completedParameters += 1;
-            sectionPoints += parameter.parameterGrade;
-          }
-        });
-
-        if (parameterCount == completedParameters) {
-          section.completed = true;
-          section.sectionGrade = sectionPoints;
-        }
-      }
-    });
-    this.sections = this.mainForm.sections;
-    this.comSerive.saveDataSession(this.mainForm);    
+  goSections() {    
+    this.comSerive.saveDataSession(this.mainForm);
+    this.router.navigateByUrl('/sections');
   }
 
 }

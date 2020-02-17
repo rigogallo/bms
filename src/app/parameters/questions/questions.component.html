@@ -62,7 +62,7 @@
                     <div class="container">
                         <div class="form-group" >
                             <label for="exampleInputEmail1">Notas:</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>         
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="selectedParameter.notes" (ngModelChange)="saveNotes($event)"></textarea>         
                         </div>
                     </div>
                  </div>

@@ -1,5 +1,15 @@
 .parameter-container {
-    border: brown 2px solid;
+  //  border: brown 2px solid;
     border-radius: 10px;
-    padding: 30px;
+    // padding: 30px;
+}
+
+.parameter-title {
+   // border: green 2px solid;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    padding: 20px;
+    border-radius: 5px;
 }

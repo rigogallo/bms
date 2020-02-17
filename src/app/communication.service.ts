@@ -1,4 +1,5 @@
 import { Injectable, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -8,8 +9,9 @@ export class CommunicationService {
   sectionSelected: EventEmitter<any> = new EventEmitter();
   parameterSelected: EventEmitter<any> = new EventEmitter();
   questionChecked: EventEmitter<any> = new EventEmitter();
+  questionNotesAdded: EventEmitter<any> = new EventEmitter();
   
-  constructor() { }
+  constructor(private router: Router) { }
 
   saveDataSession(data){
     localStorage.setItem(this.sessionStorageName, JSON.stringify(data));
@@ -17,5 +19,9 @@ export class CommunicationService {
 
   getDataSession() {
     return JSON.parse(localStorage.getItem(this.sessionStorageName));
+  }
+
+  navigate(path) {
+    this.router.navigateByUrl('/'+ path);
   }
 }

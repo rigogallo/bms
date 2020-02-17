@@ -1,69 +1,88 @@
-<div class="container-fluid">
-    <div class="row">
+<div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center" *ngIf="!aceptUseConditions">
+        <div class="container mt-4 terms">
+            <h3>Condiciones de uso</h3>
+            <hr>
+            <p class="text-justify">{{mainForm.usingConditions}}</p>
+            <div class="custom-control custom-checkbox mb-3">
+                <!-- <label>¿Acepta las condiciones?</label> -->
+                <input type="checkbox" class="custom-control-input" id="customControlValidation1" [checked]="aceptUseConditions"  (change)="userAceptUseConditions()">
+                <label class="custom-control-label" for="customControlValidation1">Acepto las condiciones de uso</label>                
+            </div>
+        </div>
+    </div>
+    <div class="row h-100 justify-content-center align-items-center" *ngIf="aceptUseConditions">
         <div class="container mt-4">
             <div class="row">
+               <div class="col-sm-12 pb-5">
+                <h3>Datos Generales</h3>
+                <hr>
+               </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Correo electónico</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1">
+                        <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="mainForm.email">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="exampleFormControlInput2">Nombre del negocio</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput2">
+                        <label for="exampleFormControlInput2">Nombre de la empresa (en los casos de que exista más de un negocio)</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput2" [(ngModel)]="mainForm.companyName">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="exampleFormControlInput3">Actividad del Negocio</label>
-                        <select class="form-control" id="exampleFormControlInput3">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                        <label for="exampleFormControlInput3">Actividad económica principal</label>
+                        <select class="form-control" id="exampleFormControlInput3" [(ngModel)]="mainForm.companyActivity">
+                            <option *ngFor="let activity of mainForm.activities">{{activity}}</option>                            
                           </select>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="exampleFormControlInput5">País del negocio</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput5">
+                        <label for="exampleFormControlInput4">País</label>                        
+                        <select class="form-control" id="exampleFormControlInput4" [(ngModel)]="mainForm.companyCountry">
+                            <option *ngFor="let country of mainForm.countries">{{country}}</option>
+                            
+                          </select>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="exampleFormControlInput5">Dirección negocio</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput5">
+                        <label for="exampleFormControlInput5">Dirección (ciudad, calle, # del edificio etc)</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput5"  [(ngModel)]="mainForm.companyAddress" >
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="exampleFormControlInput4">Fecha de inicio del negocio</label>
-                        <input id="date" type="date">
+                        <label for="exampleFormControlInput6">Fecha de inicio de operaciones del negocio</label>
+                        <input id="date" type="date" [(ngModel)]="mainForm.companyStartDate" >
                     </div>
                 </div>  
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="exampleFormControlInput6">Número de teléfono</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput6">
+                        <label for="exampleFormControlInput7">Número (s) de teléfono (s) móvil (es)</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput7" [(ngModel)]="mainForm.companyPhoneNumber">
                     </div>
-                </div>              
-            </div>
-            <div class="row mt-1 d-flex justify-content-center">
-                <nav aria-label="Page navigation example">
-                    <div *ngFor="let section of sections" class="btn m-3" [ngClass]="{
-                            'btn-outline-secondary': section.completed == false,
-                            'btn-success': section.completed 
-                          }">
-                        <a class="" (click)="loadSection(section)"> {{section.name}} {{section.sectionGrade}}</a>
+                </div>     
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput8">Nombre y cargo de la persona de contacto</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput8" [(ngModel)]="mainForm.companyPersonReference">
                     </div>
-                </nav>
+                </div>             
+                <div class="col-md-12">
+                    <div class="form-group">                       
+                        <label for="exampleFormControlInput9">Observaciones:</label>
+                        <textarea class="form-control" id="exampleFormControlInput9" rows="3" [(ngModel)]="mainForm.notes"></textarea>         
+                    </div>
+                </div>           
             </div>
-            <div class="row mt-1 d-flex justify-content-center">
-                <app-sections></app-sections>
-            </div>
+            <div class="row">
+                <div class="text-center w-100">
+                    <button class="btn btn-primary" (click)="goSections()">Continuar</button>
+                </div>
+            </div>        
         </div>
-    </div>
+    </div> 
 </div>

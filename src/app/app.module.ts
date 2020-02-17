@@ -8,6 +8,7 @@ import { SectionsComponent } from './parameters/sections/sections.component';
 import { QuestionsComponent } from './parameters/questions/questions.component';
 import { FormComponent } from './parameters/form/form.component';
 import { Routes, RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: 'form', component: FormComponent },  
@@ -29,7 +30,8 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

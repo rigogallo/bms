@@ -1,29 +1,59 @@
-<div class="container-fluid" *ngIf="selectedSection">
-    <div class="row">
-        <div class="container parameter-container w-100">
-            <h4>{{selectedSection.name}}</h4>
-            <p>{{selectedSection.description}}</p>
-           
-            <div class="row mt-1 d-flex justify-content-center">
-                <nav aria-label="Page navigation example">              
-                    <div *ngFor="let parameter of selectedSection.parameters" class="btn m-3" 
-                    [ngClass]="{
-                        'btn-outline-secondary': parameter.completed == false,
-                        'btn-success': parameter.completed && parameter.parameterGrade >= 2.33,
-                        'btn-warning': parameter.completed && (parameter.parameterGrade >= 1.33 &&  2.33 > parameter.parameterGrade),
-                        'btn-danger': parameter.completed && (parameter.parameterGrade <= 1.33)
-                      }" >
-                        <a class="" (click)="loadParameter(parameter)"> {{parameter.name}} {{parameter.parameterGrade}}</a>
-                    </div>
-                </nav>
+<div class="container-fluid">
+    <div class="row pt-1 d-flex justify-content-center">
+     <div class="container">
+        <nav aria-label="Page navigation example">
+            <div class="btn m-2 btn-outline-secondary">
+                <a class="" (click)="loadGeneralData()"> Datos Generales</a>
+            </div>   
+            <div *ngFor="let section of sections" class="btn m-1" [ngClass]="{
+                    'btn-outline-secondary': section.completed == false,
+                    'btn-success': section.completed 
+                  }">
+                <a class="" (click)="loadSection(section)"> {{section.name}} {{section.sectionGrade |  number:'1.0-2'}}</a>
             </div>
-
-            <div class="row " >
-                <div class="container">
-                    <app-questions></app-questions>
-                </div>
-                
-            </div>        
-        </div>
+         
+        </nav>
+     </div>
     </div>
+
+    <div class="row" *ngIf="selectedSection">
+        <div class="container parameter-container w-100 ">
+         <div class="parameter-title">
+           <span class="p-3">{{selectedSection.name}}</span>
+         </div>
+
+         <p>{{selectedSection.description}}</p>
+           
+         <div class="row pt-1 d-flex justify-content-center">
+             <nav aria-label="Page navigation example">                              
+                 <div *ngFor="let parameter of selectedSection.parameters" class="btn m-1" 
+                 [ngClass]="{
+                     'btn-outline-secondary': parameter.completed == false,
+                     'btn-success': parameter.completed && parameter.parameterGrade >= 2.33,
+                     'btn-warning': parameter.completed && (parameter.parameterGrade >= 1.33 &&  2.33 > parameter.parameterGrade),
+                     'btn-danger': parameter.completed && (parameter.parameterGrade <= 1.33)
+                   }" >
+                     <a class="" (click)="loadParameter(parameter)"> {{parameter.name}} {{parameter.parameterGrade |  number:'1.0-2'}}</a>
+                 </div>
+             </nav>
+         </div>
+
+         <div class="row " >
+             <div class="container">
+                 <app-questions></app-questions>
+             </div>
+             
+         </div> 
+        
+         <div class="container">
+     
+         </div>
+        </div>
+      
+    </div>
+</div>
+
+
+<div class="container-fluid" >
+   
 </div>

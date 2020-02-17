@@ -14,22 +14,24 @@ export class MainComponent implements OnInit {
   mainForm = bmsParameters;  
   bmsData: any;
 
-  constructor(private comSerive: CommunicationService,
-    private router: Router,) { }
+  constructor(
+    private communicationService: CommunicationService,
+    private router: Router
+    ) { }
 
   ngOnInit() {
    
   }
 
   startEmpty(){
-    // this.router.navigateByUrl('/form');
-    this.showForm = true;
-    this.bmsData = this.mainForm;
+    this.communicationService.saveDataSession(this.mainForm)
+    this.communicationService.navigate('form');
   }
 
   continueForm(){
-    this.showForm = true;
-    this.bmsData = this.comSerive.getDataSession();
+    // this.showForm = true;
+    this.communicationService.navigate('form');
+    // this.bmsData = this.comSerive.getDataSession();
   }
 
 }

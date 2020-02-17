@@ -21,12 +21,19 @@ export class QuestionsComponent implements OnInit {
 
   setQuestionValue(value, questionId){
     let data = {
-      questionValue: value,
+      questionValue: value, 
       questionId: questionId,
       parameter: this.selectedParameter,
       section: this.selectedSection
     }
     this.communicationService.questionChecked.emit(data);
+  }
+
+  saveNotes(event) {
+    this.communicationService.questionNotesAdded.emit({parameter: this.selectedParameter, section: this.selectedSection});
+    
+    //event.target.value
+    var x = "";
   }
 
 }
