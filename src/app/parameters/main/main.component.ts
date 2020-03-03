@@ -25,12 +25,12 @@ export class MainComponent implements OnInit {
 
   startEmpty(){
     this.communicationService.saveDataSession(this.mainForm)
-    this.communicationService.navigate('form');
+    this.communicationService.navigate('general');
   }
 
   continueForm(){
     // this.showForm = true;
-    this.communicationService.navigate('form');
+    this.communicationService.navigate('general');
     // this.bmsData = this.comSerive.getDataSession();
   }
 

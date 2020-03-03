@@ -1,0 +1,30 @@
+<app-header></app-header>
+<div class="container-fluid nav-fix ">
+    <div class="row">
+        <div class="container">
+            <h1 class="pt-3">Informe Final</h1>
+            <hr>
+            <div *ngFor="let section of mainForm.sections" class="pb-3">
+                <h2>{{section.name}} - Calificación: {{section.sectionGrade | number:'1.0-2' }}</h2>
+                <hr>
+                <div *ngFor="let parameter of section.parameters">
+                    <div class="p-3 mb-2 text-white" [ngClass]="getColor(parameter.parameterGrade)">
+                        <h5 >{{parameter.name}} - Calificación: {{parameter.parameterGrade | number:'1.0-2'}}</h5>
+                    </div>
+                    <div *ngFor="let question of parameter.questions" >
+                       
+                        <!-- <div>{{question.title}} - {{ question.value}}</div> -->
+                         <p>{{question.values[question.value] == undefined ? "" : question.values[question.value]}}</p>
+
+                    </div>
+                    <p><strong>Notas: </strong> {{parameter.notes}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="text-center w-100 p-5">
+                    <button class="btn btn-primary" (click)="goSections()">Ir a las secciones</button>
+                </div>
+            </div>        
+        </div>
+    </div>
+</div>

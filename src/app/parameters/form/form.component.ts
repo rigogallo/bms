@@ -32,7 +32,7 @@ export class FormComponent implements OnInit {
 
   goSections() {    
     this.comSerive.saveDataSession(this.mainForm);
-    this.router.navigateByUrl('/sections');
+    this.comSerive.navigate('parametros');
   }
 
 }

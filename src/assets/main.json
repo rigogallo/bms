@@ -3,7 +3,7 @@
     "email": "",
     "usingConditions": "El Centro de Innovación y Emprendimiento de Nicaragua (CIEN) brinda servicios al sector empresarial para mejorar la competitividad. Una línea de trabajo es el desarrollo y validación de metodologías y herramientas para el diagnóstico y planificación de la gestión de negocios. CIEN se reserva el derecho de ofrecer dichos recursos de forma pagada o gratuita parcial o totalmente. La persona que haga uso de este formulario y provea datos o información se regirá bajo las siguientes condiciones de uso: 1. Al completar adecuadamente este formulario, el único compromiso de CIEN es emitir un informe de resultados en digital el cual será remitido a la persona que suministre los datos a través del correo electrónico proporcionado. 2. La información particular (datos específicos) de una persona sobre un negocio no será compartida con terceras partes sin el consentimiento de la persona que suministra los datos. 3. La persona autoriza a CIEN a utilizar los datos para realizar análisis generales de la industria sin referirse a situaciones particulares y gozando del anonimato. 3. CIEN no está obligado a archivar o resguardar los datos recibidos.",
     "aceptUseConditions": false,
-    "activities": [       
+    "activities": [
         "Agricultura, ganadería, caza y silvicultura",
         "Pesca",
         "Explotación de minas y canteras",
@@ -43,6 +43,7 @@
     "companyPhoneNumber": "",
     "companyPersonReference": "",
     "notes": "",
+    "sectionsCompleted" : false,
     "sections": [
         {
             "name": "Sección I: Estrategia General",
@@ -58,17 +59,32 @@
                         {
                             "id": "s1p1q1",
                             "title": "Ha identificado claramente a todas o la mayoría de firmas nacionales o extranjeras.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Conoce muy poco a las firmas nacionales o extranjeras que tienen presencia en los mismos mercados y/o segmentos que se ha fijado como objetivo.",
+                                "2": "Conoce parcialmente a las firmas nacionales o extranjeras que realizan similares ofertas a los mismos mercados y/o segmentos que se ha fijado como objetivo.",
+                                "3": "Conoce claramente a todas o la mayoría de firmas nacionales o extranjeras que realizan similares ofertas a los mismos mercados y/o segmentos que se ha fijado como objetivo."
+                            }
                         },
                         {
                             "id": "s1p1q2",
                             "title": "Tiene un conocimiento amplio y documentado de las estrategias de otras firmas competidoras ",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Tiene un conocimiento muy limitado de las estrategias de las empresas que realizan tienen presencia en los mismos mercados y/o segmentos que se han fijado como objetivo.",
+                                "2": "Tiene un conocimiento parcial de las estrategias de las empresas que realizan similares ofertas a los mismos mercados y/o segmentos que se han fijado como objetivo.",
+                                "3": "Tiene un conocimiento amplio y documentado de las estrategias de las empresas que realizan similares ofertas a los mismos mercados y/o segmentos que se han fijado como objetivo."
+                            }
                         },
                         {
                             "id": "s1p1q3",
                             "title": "Monitorea a potenciales firmas competidoras en el mercado que podrían, en el futuro, ingresar al mercado objetivo",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Ha reconocido muy poco a potenciales firmas competidoras en el mercado que podrían, en el futuro, realizar similares ofertas a los mismos mercados y/o segmentos que se han fijado como objetivo.",
+                                "2": "Ha reconocido parcialmente y realiza algún seguimiento de potenciales firmas competidoras en el mercado que podrían, en el futuro, realizar similares ofertas a los mismos mercados y/o segmentos que se han fijado como objetivo.",
+                                "3": "Ha reconocido claramente y realiza un seguimiento de potenciales firmas competidoras en el mercado que podrían, en el futuro, realizar similares ofertas a los mismos mercados y/o segmentos que se han fijado como objetivo."
+                            }
                         }
                     ]
                 },
@@ -81,17 +97,32 @@
                         {
                             "id": "s1p2q1",
                             "title": "Dispone de una identificación clara de sus compradores objetivos y sabe cómo llegar a ellos",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Dispone de una identificación muy limitada o escasa de sus compradores objetivos.",
+                                "2": "Dispone de una identificación parcial de sus compradores objetivos y tiene algún conocimiento de cómo llegar a ellos.",
+                                "3": "Dispone de una identificación clara de sus compradores objetivos y sabe cómo llegar a ellos."
+                            }
                         },
                         {
                             "id": "s1p2q2",
                             "title": "Tiene un conocimiento amplio y documentado de las necesidades de los clientes objetivo",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Tiene conocimiento muy escaso de las necesidades de los clientes objetivo del negocio.",
+                                "2": "Tiene un conocimiento parcial de las necesidades de los clientes objetivo del negocio.",
+                                "3": "Tiene un conocimiento amplio de las necesidades de los clientes objetivo del negocio."
+                            }
                         },
                         {
                             "id": "s1p2q3",
                             "title": "Maneja información suficiente sobre los deseos y requerimientos específicos de los clientes objetivo ",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Maneja información muy escasa sobre los deseos y expectativas de sus clientes objetivo",
+                                "2": "Maneja información parcial sobre los deseos y expectativas de sus clientes objetivo.",
+                                "3": "Maneja información suficiente sobre los deseos y expectativas de sus clientes objetivo."
+                            }
                         }
                     ]
                 },
@@ -104,17 +135,32 @@
                         {
                             "id": "s1p3q1",
                             "title": "Presenta una combinación eficaz de las características del producto (servicio), la calidad, el precio y la entrega, de forma tal, que satisface ampliamente las necesidades, deseos y expectativas de los clientes objetivo ",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Presenta una combinación muy limitada de las características del producto (servicio), la calidad, el precio y la entrega de forma tal que satisface poco las necesidades, deseos y expectativas de los clientes objetivo.",
+                                "2": "Presenta una mezcla aceptable de las características del producto (servicio), la calidad, el precio y la entrega de forma tal que satisface lo básico de las necesidades, deseos y expectativas de los clientes objetivo. ",
+                                "3": "Presenta una combinación eficaz de las características del producto (servicio), la calidad, el precio y la entrega de forma tal que satisface ampliamente las necesidades, deseos y expectativas de los clientes objetivo."
+                            }
                         },
                         {
                             "id": "s1p3q2",
                             "title": "Dispone de una diseño que combina las características del producto (servicio), la calidad, el precio y la entrega de tal manera que es diferente y superior que la competencia",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Ha hecho muy pocos esfuerzos para diseñar una oferta, combinando las características del producto, la calidad, el precio y la entrega de tal manera que su nivel es inferior a la competencia.",
+                                "2": "Ha realizado esfuerzos modestos para diseñar una oferta, combinando las características del producto, la calidad, el precio y la entrega de tal manera que ha logrado ser similar a sus competidores.",
+                                "3": "Ha hecho esfuerzos conscientes y significativos para diseñar una oferta, combinando las características del producto, la calidad, el precio y la entrega de tal manera que es diferente y superior a la de sus competidores."
+                            }
                         },
                         {
                             "id": "s1p3q3",
                             "title": "Realiza esfuerzos conscientes para innovar su oferta a fin de fidelizar sus mercados actuales o alcanzar nuevos que no han sido explotados. ",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Ha realizado muy pocas acciones de innovación en el producto (servicio) a fin de fidelizar sus mercados actuales o alcanzar nuevos mercados o segmentos que no han sido explotados.",
+                                "2": "Ha realizado algunos esfuerzos de innovación en el producto (servicio) a fin de fidelizar sus mercados actuales o alcanzar nuevos mercados o segmentos que no han sido explotados.",
+                                "3": "Ha realizado esfuerzos importantes de innovación en el producto (servicio) a fin de fidelizar sus mercados actuales o alcanzar nuevos mercados o segmentos que no han sido explotados."
+                            }
                         }
                     ]
                 },
@@ -127,22 +173,42 @@
                         {
                             "id": "s1p4q1",
                             "title": "Dispone del nivel de información y conocimientos adecuados para la gestión estratégica",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Dispone de escasa información y conocimientos escasos y/o de poca calidad para la gestión estratégica.",
+                                "2": "Dispone de información y conocimientos básicos y/o de calidad media para la gestión estratégica.",
+                                "3": "Dispone de información y conocimientos suficientes y/o de buena calidad para la gestión estratégica."
+                            }
                         },
                         {
                             "id": "s1p4q2",
                             "title": "Cuenta con el nivel de recursos humanos apropiados para la gestión estratégica",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Cuenta con muy pocos recursos humanos y/o baja competencia para la gestión estratégica.",
+                                "2": "Cuenta con recursos humanos básicos y/o de mediana competencia para la gestión estratégica.",
+                                "3": "Cuenta con recursos humanos suficientes y/o muy competentes para la gestión estratégica."
+                            }
                         },
                         {
                             "id": "s1p4q3",
                             "title": "Maneja el nivel de recursos materiales y financieros suficiente y adecuado para la gestión estratégica",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Dispone escasos recursos materiales y financieros escasos y/o de poca calidad para la gestión estratégica.",
+                                "2": "Posee recursos materiales y financieros básicos y/o de calidad media para la gestión estratégica.",
+                                "3": "Posee recursos materiales y financieros suficientes y/o de buena calidad para la gestión estratégica."
+                            }
                         },
                         {
                             "id": "s1p4q4",
                             "title": "Dispone de la red de contactos adecuada para la gestión estratégica",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Mantiene redes de contacto limitadas y/o poco efectivas para la gestión estratégica.",
+                                "2": "Mantiene redes de contacto básicas y/o efectivas para la gestión estratégica.",
+                                "3": "Mantiene redes de contacto amplias y/o muy efectivas para la gestión estratégica."
+                            }
                         }
                     ]
                 }
@@ -162,17 +228,32 @@
                         {
                             "id": "s2p1q1",
                             "title": "El diseño y la instalación de la planta son suficientes y adecuados",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "El diseño y la instalación de la planta son muy limitados lo provoca inconvenientes para producir las cantidades necesarias y con riesgos importantes de afectar los objetivos de calidad, tiempo y costo.",
+                                "2": "El diseño y la instalación de la planta son básicos lo que permite producir las cantidades necesarias con algún riesgo de afectar los objetivos de calidad, tiempo y costo.",
+                                "3": "El diseño y la instalación de la planta son superiores en el sector (modernas y con capacidad de crecimiento) lo que permite producir las cantidades requeridas sin afectar los objetivos de calidad, tiempo y costo."
+                            }
                         },
                         {
                             "id": "s2p1q2",
                             "title": "El diseño de los procesos de producción es apropiado",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "El diseño de los procesos de producción es deficiente lo que limita la producción y con riesgos significativos de afectar los objetivos de calidad, tiempo y costo.",
+                                "2": "El diseño de los procesos de producción es básico de tal forma que facilita producir lo requerido con ciertas limitaciones y con algún riesgo de afectar los objetivos de calidad, tiempo y costo.",
+                                "3": "El diseño de los procesos de producción es muy adecuado de tal forma que permite producir las cantidades necesarias sin afectar los objetivos de calidad, tiempo y costo."
+                            }
                         },
                         {
                             "id": "s2p1q3",
                             "title": "La ubicación de la planta es conveniente y facilita la producción.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "La ubicación de la planta es muy conveniente lo que facilita la producción de las cantidades requeridas sin afectar los objetivos de calidad, tiempo y costo.",
+                                "2": "La ubicación de la planta es adecuada lo que permite producir las cantidades necesarias con poco riesgo de afectar los objetivos de calidad, tiempo y costo.",
+                                "3": "La ubicación de la planta es inapropiada lo que afecta la producción de las cantidades necesarias con riesgos significativos de afectar los objetivos de calidad, tiempo y costo."
+                            }
                         }
                     ]
                 },
@@ -185,17 +266,32 @@
                         {
                             "id": "s2p2q1",
                             "title": "Los estándares de calidad son suficientes y adecuados para alcanzar los objetivos.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Los estándares de calidad son limitados y afectan su objetivo de calidad con riesgos importantes para los objetivos de cantidad, tiempo y costo.",
+                                "2": "Los estándares de calidad son básicos y permiten alcanzar su objetivo de calidad con algún riesgo de afectar los objetivos de cantidad, tiempo y costo.",
+                                "3": "Los estándares de calidad son suficientes y adecuados (iguales o superiores en el sector) para alcanzar su objetivo de calidad sin afectar los objetivos de cantidad, tiempo y costo."
+                            }
                         },
                         {
                             "id": "s2p2q2",
                             "title": "Los procedimientos de control de calidad son efectivos y contribuyen a lograr los objetivos",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Los procedimientos de calidad son limitados y afectan su objetivo de calidad con riesgos significativos para los objetivos de cantidad, tiempo y costo.",
+                                "2": "Los procedimientos de calidad son básicos y aportan a lograr su objetivo de calidad con algún riesgo de afectar los objetivos de cantidad, tiempo y costo.",
+                                "3": "Los procedimientos de calidad son amplios, detallados y operaciones contribuyendo a lograr su objetivo de calidad sin afectar los objetivos de cantidad, tiempo y costo."
+                            }
                         },
                         {
                             "id": "s2p2q3",
                             "title": "Los servicios de pre y posventa son apropiados para lograr y complementar la calidad de los productos (servicios) ofrecidos.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Los servicios de pre y posventa son muy limitados y afectan la calidad de los productos (servicios) principales con riesgos relevantes para los objetivos de cantidad, tiempo y costo.",
+                                "2": "Los servicios de pre y posventa son básicos y contribuyen a la calidad de los productos (servicios) principales con algún riesgo de afectar los objetivos de cantidad, tiempo y costo.",
+                                "3": "Los servicios de pre y posventa son superiores en el sector y complementan la calidad de los productos (servicios) principales sin afectar los objetivos de cantidad, tiempo y costo."
+                            }
                         }
                     ]
                 },
@@ -208,22 +304,42 @@
                         {
                             "id": "s2p3q1",
                             "title": "Las necesidades de inventario son determinadas de manera apropiada y eficaz.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Las necesidades de inventario no se estiman de forma apropiada lo que afecta el objetivo de tiempo con riesgo importantes en los objetivos de cantidad, calidad y costo.",
+                                "2": "Las necesidades de inventario se calculan con algunas limitaciones e imprecisiones lo que perjudica el objetivo de tiempo con algún riesgo en el logro de los objetivos de cantidad, calidad y costo.",
+                                "3": "Las necesidades de inventario se estiman de forma eficiente y precisa para alcanzar su objetivo de tiempo sin afectar sus objetivos de cantidad, calidad y costo."
+                            }
                         },
                         {
                             "id": "s2p3q2",
                             "title": "Los métodos de manejos de materiales, procedimientos y equipos son adecuados para alcanzar los objetivos.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Los métodos de manejo de materiales, procedimientos y equipos son deficientes y afectan lograr su objetivo de tiempo con riesgos frecuentes sobre los objetivos de cantidad, calidad y costo.",
+                                "2": "Los métodos de manejo de materiales, procedimientos y equipos son básicos y, en general, contribuyen a lograr su objetivo de tiempo con riesgos menores sobre los objetivos de cantidad, calidad y costo.",
+                                "3": "Los métodos de manejo de materiales, procedimientos y equipos son muy adecuados para alcanzar su objetivo de tiempo sin afectar los objetivos de cantidad, calidad y costo."
+                            }
                         },
                         {
                             "id": "s2p3q3",
                             "title": "Las actividades compra (materiales, partes, suministros, etc.) y entrega de productos (servicios) terminados se realizan de forma efectiva.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Las actividades de compras (materiales, partes, suministros, etc.) y entrega de productos (servicios) terminados son deficientes y poco efectivas lo cual perjudica su objetivo de tiempo con algún riesgo significativos para los objetivos de calidad, cantidad y costo.",
+                                "2": "Las actividades de compras (materiales, partes, suministros, etc.) y entrega de productos (servicios) terminados se realiza bastante bien con algunas afectaciones menores en su objetivo de tiempo con algún riesgo para los objetivos de calidad, cantidad y costo.",
+                                "3": "Las actividades de compras (materiales, partes, suministros, etc.) y entrega de productos (servicios) terminados se realiza de forma muy efectiva y eficiente de forma tal que logran su objetivo de tiempo sin afectar los objetivos de calidad, cantidad y costo."
+                            }
                         },
                         {
                             "id": "s2p3q4",
                             "title": "Dispone de procedimientos para mantener reservas de inventario para lograr los objetivos.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Los procedimientos para mantener reservas de inventario son muy apropiados lo cual permite alcanzar su objetivo de tiempo sin afectar los objetivos de cantidad, calidad y costo.",
+                                "2": "Los procedimientos para mantener reservas de inventario presentan algunas limitaciones que afectan su el logro de su objetivo de tiempo con algún riesgo para los objetivos de cantidad, calidad y costo.",
+                                "3": "Los procedimientos para mantener reservas de inventario presentan serios problemas que perjudican sensiblemente su objetivo de tiempo con altos riesgos para los objetivos de cantidad, calidad y costo."
+                            }
                         }
                     ]
                 },
@@ -236,27 +352,47 @@
                         {
                             "id": "s2p4q1",
                             "title": "Dispone de la capacidad para nivelar la producción a fin de alcanzar los objetivos.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Carece de capacidad suficiente de nivelar la producción o cadenas de montaje lo cual perjudica sus objetivos de costo con altos riesgos para sus objetivos de calidad, cantidad y tiempo.",
+                                "2": "Cuenta de una capacidad media de nivelar la producción o cadenas de montaje con pocas afectaciones a sus objetivos de costo y con algún riesgo a sus objetivos de calidad, cantidad y tiempo.",
+                                "3": "Dispone de la capacidad de nivelar la producción o cadenas de montaje para alcanzar sus objetivos de costo sin afectar sus objetivos de calidad, cantidad y tiempo."
+                            }
                         },
                         {
                             "id": "s2p4q2",
                             "title": "Los sistemas de mantenimiento son adecuados para lograr los objetivos.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Los sistemas de mantenimiento son deficientes y perjudican el logro de su objetivo de costo con altos riesgos a sus objetivos de cantidad, calidad y tiempo.",
+                                "2": "Los sistemas de mantenimiento son básicos con algunas limitaciones para alcanzar su objetivo de costo y con algún riesgo a sus objetivos de cantidad, calidad y tiempo.",
+                                "3": "Los sistemas de mantenimiento son muy efectivos y eficientes para alcanzar su objetivo de costo sin afectar sus objetivos de cantidad, calidad y tiempo."
+                            }
                         },
                         {
                             "id": "s2p4q3",
                             "title": "Las técnicas de mejora de métodos son las correctas para cumplir los objetivos.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Las técnicas de mejora son escasas o nulas lo cual no contribuye al objetivo de costos y puede ser de alto riesgo para sus objetivos de cantidad, calidad y tiempo.",
+                                "2": "Cuenta con algunas técnicas de mejora de métodos básicas que contribuyen al objetivo de costos con algún riesgo a sus objetivos de cantidad, calidad y tiempo.",
+                                "3": "Dispone de técnicas de mejora de métodos muy apropiada para alcanzar su objetivo de costo sin afectar sus objetivos de cantidad, calidad y tiempo."
+                            }
                         },
                         {
                             "id": "s2p4q4",
                             "title": "Cuenta con la capacidad para instaurar programas de reducción de costos para lograr los objetivos.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Las acciones de reducción de costos son escasas o nula por lo que no contribuye al logro de sus objetivos de costo y puede ser de alto riesgo para los objetivos de calidad, cantidad y tiempo.",
+                                "2": "Dispone de algunas acciones de reducción de costos que han contribuido modestamente al logro de sus objetivos de costo; no obstante, existe algún riesgo de afectar los objetivos de calidad, cantidad y tiempo.",
+                                "3": "Cuenta con programas de reducción de costos efectivos que han contribuido significativamente a alcanzar sus objetivos de costo sin afectar sus objetivos de calidad, cantidad, y tiempo."
+                            }
                         }
                     ]
                 },
                 {
-                    "name": "Gestión de la Producción",
+                    "name": "Recursos",
                     "description": "Describe la capacidad del negocio para planificar, adquirir y controlar los recursos necesarios para la gestión de la producción.",
                     "notes": "",
                     "completed": false,
@@ -264,22 +400,42 @@
                         {
                             "id": "s2p5q1",
                             "title": "Dispone del nivel de información y conocimientos adecuados para la gestión de la producción.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Dispone de escasa información y conocimientos y/o de poca calidad para la gestión de la producción.",
+                                "2": "Dispone de información y conocimientos básicos y/o de calidad media para la gestión de producción.",
+                                "3": "Dispone de información y conocimientos suficientes y/o de buena calidad para la gestión de producción."
+                            }
                         },
                         {
                             "id": "s2p5q2",
                             "title": "Cuenta con el nivel de recursos humanos apropiados para la gestión de la producción.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Cuenta con muy pocos recursos humanos y/o de baja competencia para la gestión de producción.",
+                                "2": "Cuenta con recursos humanos básicos y/o de mediana competencia para la gestión de producción.",
+                                "3": "Cuenta con recursos humanos suficientes y/o muy competentes para la gestión de producción."
+                            }
                         },
                         {
                             "id": "s2p5q3",
                             "title": "Maneja el nivel de recursos materiales y financieros suficiente y adecuado para la gestión de la producción.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Posee escasos recursos materiales y financieros y/o de poca calidad para la gestión de producción.",
+                                "2": "Posee recursos materiales y financieros básicos y/o de calidad media para la gestión de producción.",
+                                "3": "Posee recursos materiales y financieros suficientes y/o de buena calidad para la gestión de producción."
+                            }
                         },
                         {
                             "id": "s2p5q4",
                             "title": "Dispone de la red de contactos adecuada para la gestión de la producción.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Mantiene redes de contacto limitadas y/o poco efectivas para la gestión de producción.",
+                                "2": "Mantiene redes de contacto básicas y/o efectivas para la gestión de producción.",
+                                "3": "Mantiene redes de contacto amplias y/o muy efectivas para la gestión de producción."
+                            }
                         }
                     ]
                 }
@@ -299,17 +455,32 @@
                         {
                             "id": "s3p1q1",
                             "title": "Elabora la literatura de ventas suficiente y apropiada",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Dispone de escasa capacidad para elaborar la literatura de ventas adecuada para completar y complementar la comunicación de su oferta a los compradores.",
+                                "2": "Dispone de una capacidad media para elaborar la literatura de ventas adecuada para completar y complementar la comunicación de su oferta a los compradores.",
+                                "3": "Dispone de una alta capacidad para elaborar la literatura de ventas adecuada para completar y complementar la comunicación de su oferta a los compradores."
+                            }
                         },
                         {
                             "id": "s3p1q2",
                             "title": "Desarrolla programas de promoción atractivos y eficaces.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Cuenta con una capacidad baja para organizar e iniciar programas de promoción adecuados y apropiados para completar y complementar la comunicación de su oferta a los compradores deseados.",
+                                "2": "Cuenta con una capacidad media para organizar e iniciar programas de promoción adecuados y apropiados para completar y complementar la comunicación de su oferta a los compradores deseados.",
+                                "3": "Cuenta con una capacidad superior para organizar e iniciar programas de promoción adecuados y apropiados para completar y complementar la comunicación de su oferta a los compradores deseados."
+                            }
                         },
                         {
                             "id": "s3p1q3",
                             "title": "Realiza programas de publicidad apropiados y efectivos",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Tiene una capacidad baja para organizar e iniciar programas de publicidad adecuados y apropiados para completar y complementar la comunicación de su oferta a los compradores deseados.",
+                                "2": "Tiene una capacidad media para organizar e iniciar programas de publicidad adecuados y apropiados para completar y complementar la comunicación de su oferta a los compradores deseados.",
+                                "3": "Tiene una capacidad elevada para organizar e iniciar programas de publicidad adecuados y apropiados para completar y complementar la comunicación de su oferta a los compradores deseados."
+                            }
                         }
                     ]
                 },
@@ -322,12 +493,22 @@
                         {
                             "id": "s3p2q1",
                             "title": "Dispone de canales de distribución suficientes y adecuados",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Posee una baja capacidad para establecer los canales de distribución adecuados y apropiados para entregar su oferta a los compradores.",
+                                "2": "Posee una capacidad media para establecer los canales de distribución adecuados y apropiados para entregar su oferta a los compradores.",
+                                "3": "Posee una alta capacidad para establecer los canales de distribución adecuados y apropiados para entregar su oferta a los compradores."
+                            }
                         },
                         {
                             "id": "s3p2q2",
                             "title": "Cuenta con los puntos o establecimiento de ventas suficientes y apropiados.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Cuenta con capacidad baja para instalar los puntos de ventas adecuados y apropiados que le permitan entregar su oferta a los compradores.",
+                                "2": "Cuenta con capacidad media para instalar los puntos de ventas adecuados y apropiados que le permitan entregar su oferta a los compradores.",
+                                "3": "Cuenta con capacidad elevada para instalar los puntos de ventas adecuados y apropiados que le permitan entregar su oferta a los compradores."
+                            }
                         }
                     ]
                 },
@@ -340,22 +521,42 @@
                         {
                             "id": "s3p3q1",
                             "title": "Dispone del nivel de información y conocimientos adecuados para la gestión de marketing.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Dispone de escasa información y conocimientos y/o de poca calidad para la gestión de marketing.",
+                                "2": "Dispone de información y conocimientos básicos y/o de calidad media para la gestión de marketing.",
+                                "3": "Dispone de información y conocimientos suficientes y/o de buena calidad para la gestión de marketing."
+                            }
                         },
                         {
                             "id": "s3p3q2",
                             "title": "Cuenta con el nivel de recursos humanos apropiados para la gestión de marketing.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Cuenta con muy pocos recursos humanos y/o de baja competencia para la gestión de marketing.",
+                                "2": "Cuenta con recursos humanos básicos y/o de mediana competencia para la gestión de marketing.",
+                                "3": "Cuenta con recursos humanos suficientes y/o muy competentes para la gestión de marketing."
+                            }
                         },
                         {
                             "id": "s3p3q3",
                             "title": "Maneja el nivel de recursos materiales y financieros suficiente y adecuado para la gestión de marketing.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Posee escasos recursos materiales y financieros y/o de poca calidad para la gestión de marketing.",
+                                "2": "Posee recursos materiales y financieros básicos y/o de calidad media para la gestión de marketing.",
+                                "3": "Posee recursos materiales y financieros suficientes y/o de buena calidad para la gestión de marketing."
+                            }
                         },
                         {
                             "id": "s3p3q4",
                             "title": "Dispone de la red de contactos adecuada para la gestión de marketing.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Mantiene redes de contacto limitadas y/o poco efectivas para la gestión de marketing.",
+                                "2": "Mantiene redes de contacto básicas y/o efectivas para la gestión de marketing.",
+                                "3": "Mantiene redes de contacto amplias y/o muy efectivas para la gestión de marketing."
+                            }
                         }
                     ]
                 }
@@ -375,17 +576,32 @@
                         {
                             "id": "s4p1q1",
                             "title": "La prospección y atención a solicitudes de ventas es suficiente y adecuada.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Cuenta con capacidades bajas para realizar una prospección y atención a las solicitudes de venta.",
+                                "2": "Cuenta con capacidades medias para realizar una prospección y atención a las solicitudes de venta.",
+                                "3": "Cuenta con capacidades elevadas para realizar una prospección y atención a las solicitudes de venta."
+                            }
                         },
                         {
                             "id": "s4p1q2",
                             "title": "La preparación de especificaciones y negociación es efectiva.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Dispone de baja capacidad en la preparación de especificaciones y en llevar a cabo las negociaciones para conseguir los pedidos.",
+                                "2": "Dispone de media capacidad en la preparación de especificaciones y en llevar a cabo las negociaciones para conseguir los pedidos.",
+                                "3": "Dispone de alta capacidad en la preparación de especificaciones y en llevar a cabo las negociaciones para conseguir los pedidos."
+                            }
                         },
                         {
                             "id": "s4p1q3",
                             "title": "La fijación de precios y cotización se realiza de manera eficiente.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Tiene una limitada capacidad en la fijación de precios y elaboración de cotizaciones que dificulta conseguir los pedidos.",
+                                "2": "Tiene una capacidad media en la fijación de precios y elaboración de cotizaciones que permite conseguir una cantidad significativa de los pedidos.",
+                                "3": "Tiene una enorme capacidad en la fijación de precios y elaboración de cotizaciones que permite conseguir los pedidos."
+                            }
                         }
                     ]
                 },
@@ -398,22 +614,42 @@
                         {
                             "id": "s4p2q1",
                             "title": "La estimación de costos de producción es conforme las normas y prácticas aceptadas.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Presenta una baja capacidad en determinar los costos de producción relativos a la programación de la producción y a los costos estándar de cada pedido.",
+                                "2": "Presenta una capacidad media en determinar los costos de producción relativos a la programación de la producción y a los costos estándar de cada pedido.",
+                                "3": "Presenta una gran capacidad en determinar los costos de producción relativos a la programación de la producción y a los costos estándar de cada pedido."
+                            }
                         },
                         {
                             "id": "s4p2q2",
                             "title": "El despacho y distribución de los trabajos permite iniciar las actividades de producción y los movimientos de materiales y herramientas.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Cuenta con una muy baja capacidad de despachar el trabajo para iniciar las actividades de producción y los movimientos de materiales y herramientas.",
+                                "2": "Cuenta con una capacidad media de despachar el trabajo para iniciar las actividades de producción y los movimientos de materiales y herramientas.",
+                                "3": "Cuenta con una muy buena capacidad de despachar el trabajo para iniciar las actividades de producción y los movimientos de materiales y herramientas."
+                            }
                         },
                         {
                             "id": "s4p2q3",
                             "title": "La programación y secuencia del trabajo permite decidir cuándo y dónde deben producirse las solicitudes y trasladar las piezas o los productos.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Dispone de una baja capacidad para realizar la programación y secuencia de los trabajos para decidir cuándo y dónde deben producirse las solicitudes y determinar si deben trasladarse las piezas y los productos.",
+                                "2": "Dispone de una capacidad media para realizar la programación y secuencia de los trabajos para decidir cuándo y dónde deben producirse las solicitudes y determinar si deben trasladarse las piezas y los productos.",
+                                "3": "Dispone de una capacidad superior para realizar la programación y secuencia de los trabajos para decidir cuándo y dónde deben producirse las solicitudes y determinar si deben trasladarse las piezas y los productos."
+                            }
                         },
                         {
                             "id": "s4p2q4",
                             "title": "Los fletes y transporte aseguran la entrega y distribución física del pedido de forma efectiva y eficiente.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Tiene una capacidad inferior de cumplir con las operaciones de flete lo cual no facilita el traslado de los productos del negocio al cliente.",
+                                "2": "Tiene una capacidad media de cumplir con las operaciones de flete para facilitar el traslado de los productos del negocio al cliente.",
+                                "3": "Tiene una capacidad superior de cumplir con las operaciones de flete para facilitar el traslado de los productos del negocio al cliente."
+                            }
                         }
                     ]
                 },
@@ -426,22 +662,42 @@
                         {
                             "id": "s4p3q1",
                             "title": "Dispone del nivel de información y conocimientos adecuados para la gestión transaccional.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Dispone de escasa información y conocimientos y/o de poca calidad para la gestión de transacciones.",
+                                "2": "Dispone de información y conocimientos básicos y/o de calidad media para la gestión de transacciones.",
+                                "3": "Dispone de información y conocimientos suficientes y/o de buena calidad para la gestión de transacciones."
+                            }
                         },
                         {
                             "id": "s4p3q2",
                             "title": "Cuenta con el nivel de recursos humanos apropiados para la gestión transaccional.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Cuenta con muy pocos recursos humanos y/o de baja competencia para la gestión de transacciones.",
+                                "2": "Cuenta con recursos humanos básicos y/o de mediana competencia para la gestión de transacciones.",
+                                "3": "Cuenta con recursos humanos suficientes y/o muy competentes para la gestión de transacciones."
+                            }
                         },
                         {
                             "id": "s4p3q3",
                             "title": "Maneja el nivel de recursos materiales y financieros suficiente y adecuado para la gestión transaccional.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Posee escasos recursos materiales y financieros y/o de poca calidad para la gestión de transacciones.",
+                                "2": "Posee recursos materiales y financieros básicos y/o de calidad media para la gestión de transacciones.",
+                                "3": "Posee recursos materiales y financieros suficientes y/o de buena calidad para la gestión de transacciones."
+                            }
                         },
                         {
                             "id": "s4p3q4",
                             "title": "Dispone de la red de contactos adecuada para la gestión transaccional.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Mantiene redes de contacto limitadas y/o poco efectivas para la gestión de transacciones.",
+                                "2": "Mantiene redes de contacto básicas y/o efectivas para la gestión de transacciones.",
+                                "3": "Mantiene redes de contacto amplias y/o muy efectivas para la gestión de transacciones."
+                            }
                         }
                     ]
                 }
@@ -461,22 +717,42 @@
                         {
                             "id": "s5p1q1",
                             "title": "Han identificado cuándo, dónde y cómo podrían beneficiarse del uso de la TIC en la gestión estratégica.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Dispone de baja capacidad en determinar cuándo, dónde y cómo podría beneficiarse del uso de las tecnologías de la información y de la comunicación en la gestión estratégica del negocio.",
+                                "2": "Dispone de capacidad media en determinar cuándo, dónde y cómo podría beneficiarse del uso de las tecnologías de la información y de la comunicación en la gestión de estratégica.",
+                                "3": "Dispone de gran capacidad en determinar cuándo, dónde y cómo podría beneficiarse del uso de las tecnologías de la información y de la comunicación en la gestión estratégica del negocio."
+                            }
                         },
                         {
                             "id": "s5p1q2",
                             "title": "Tienen determinado cuándo, dónde y cómo podrían beneficiarse del uso de las TIC en la gestión de la producción.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Cuenta con baja capacidad en determinar cuándo, dónde y cómo podría beneficiarse del uso de las tecnologías de la información y de la comunicación para la producción de bienes o servicios.",
+                                "2": "Cuenta con capacidad media en determinar cuándo, dónde y cómo podría beneficiarse del uso de las tecnologías de la información y de la comunicación para la producción de bienes o servicios.",
+                                "3": "Cuenta con enorme capacidad en determinar cuándo, dónde y cómo podría beneficiarse del uso de las tecnologías de la información y de la comunicación para la producción de bienes o servicios."
+                            }
                         },
                         {
                             "id": "s5p1q3",
                             "title": "Conocen cuándo, dónde y cómo podrían beneficiarse del uso de las TIC en la gestión de marketing.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Tiene una baja capacidad en determinar cuándo, dónde y cómo podría beneficiarse de la aplicación de tecnologías de la información y de la comunicación para promocionar sus productos o servicios.",
+                                "2": "Tiene una capacidad media en determinar cuándo, dónde y cómo podría beneficiarse de la aplicación de tecnologías de la información y de la comunicación para promocionar sus productos o servicios.",
+                                "3": "Tiene una capacidad elevada en determinar cuándo, dónde y cómo podría beneficiarse de la aplicación de tecnologías de la información y de la comunicación para promocionar sus productos o servicios."
+                            }
                         },
                         {
                             "id": "s5p1q4",
                             "title": "Han establecido cuándo, dónde y cómo podrían beneficiarse del uso de las TIC en la gestión transaccional",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "",
+                                "2": "",
+                                "3": ""
+                            }
                         }
                     ]
                 },
@@ -489,22 +765,42 @@
                         {
                             "id": "s5p2q1",
                             "title": "Han utilizado las TIC en la gestión estratégica.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Utiliza muy poco y de forma limitada las tecnologías de la información y de la comunicación para la gestión estratégica.",
+                                "2": "Utiliza con regularidad y de forma modesta las tecnologías de la información y de la comunicación para la gestión estratégica.",
+                                "3": "Utiliza siempre y de forma amplia e intensiva las tecnologías de la información y de la comunicación para la gestión estratégica."
+                            }
                         },
                         {
                             "id": "s5p2q2",
                             "title": "Han utilizado las TIC en la gestión de la producción.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Emplea muy poco y de forma limitada las tecnologías de la información y de la comunicación para la producción de bienes y/o servicios.",
+                                "2": "Emplea con regularidad y de forma modesta las tecnologías de la información y de la comunicación para la producción de bienes y/o servicios. ",
+                                "3": "Emplea siempre y de forma amplia e intensiva las tecnologías de la información y de la comunicación para la producción de bienes y/o servicios."
+                            }
                         },
                         {
                             "id": "s5p2q3",
                             "title": "Han utilizado las TIC en la gestión de marketing.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "Ocupa muy poco y de forma limitada las tecnologías de la información y de la comunicación para comercializar sus productos y servicios.",
+                                "2": "Ocupa con regularidad y de forma modesta las tecnologías de la información y de la comunicación para comercializar sus productos y servicios.",
+                                "3": "Ocupa siempre y de forma amplia e intensiva las tecnologías de la información y de la comunicación para comercializar sus productos y servicios."
+                            }
                         },
                         {
                             "id": "s5p2q4",
                             "title": "Han utilizado las TIC en la gestión transaccional.",
-                            "value": 0
+                            "value": 0,
+                            "values": {
+                                "1": "",
+                                "2": "",
+                                "3": ""
+                            }
                         }
                     ]
                 }

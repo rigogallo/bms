@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-bms">
+    <a class="navbar-brand font-weight-bold" href="#">BMS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link" (click)="navigate('inicio')">Inicio </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="navigate('general')">Datos Generales <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" (click)="navigate('parametros')">Parámetros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="navigate('ayuda')">Ayuda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="logout()">Cerrar Sesión</a>
+          </li>
+      
+      </ul>           
+        <button class="btn btn-outline-success my-2 my-sm-0 " (click)="getReport()" *ngIf="canGenerateReport">Generar Informe</button>
+     
+    </div>
+  </nav>

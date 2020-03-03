@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { CommunicationService } from '../../communication.service';
+import { EventEmitter } from 'protractor';
 
 @Component({
   selector: 'app-sections',
@@ -47,6 +48,8 @@ export class SectionsComponent implements OnInit {
   }
 
   updateForm(data) {
+    let sectionsCompleted = 0;
+     
     this.mainForm.sections.forEach(section => {
       if (section.name == data.section.name) {
         let parameterCount = section.parameters.length;
@@ -86,16 +89,28 @@ export class SectionsComponent implements OnInit {
 
         if (parameterCount == completedParameters) {
           section.completed = true;
-          section.sectionGrade = sectionPoints;
+          sectionsCompleted += 1;
+          section.sectionGrade = sectionPoints/parameterCount;
         }
       }
-    });
+      else {
+        if (section.completed) {
+          sectionsCompleted += 1;
+        }
+        
+      }
+    });   
+    if (sectionsCompleted == this.mainForm.sections.length) {
+      this.mainForm.sectionsCompleted = true;
+      this.communicationService.sectionsCompleted.emit(true);
+    }
     this.sections = this.mainForm.sections;
     this.communicationService.saveDataSession(this.mainForm);    
   }
 
   loadSection(section) {
     this.selectedSection = section;
+    this.loadParameter(section.parameters[0]);
     //this.communicationService.sectionSelected.emit(section);
     //this.communicationService.parameterSelected.emit({ parameter: section.parameters[0], selectedSection: this.selectedSection });
   }
@@ -109,6 +124,14 @@ export class SectionsComponent implements OnInit {
   }
 
   loadGeneralData(){
-   this.communicationService.navigate('form');
+   this.communicationService.navigate('general');
+  }
+
+  goToReport(){
+    this.communicationService.navigate('informe');
+  }
+
+  getColor(section) {
+    return this.communicationService.getSectionColor(section);
   }
 }

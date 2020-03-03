@@ -30,10 +30,7 @@ export class QuestionsComponent implements OnInit {
   }
 
   saveNotes(event) {
-    this.communicationService.questionNotesAdded.emit({parameter: this.selectedParameter, section: this.selectedSection});
-    
-    //event.target.value
-    var x = "";
+    this.communicationService.questionNotesAdded.emit({parameter: this.selectedParameter, section: this.selectedSection});    
   }
 
 }

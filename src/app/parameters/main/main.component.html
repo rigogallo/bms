@@ -1,30 +1,16 @@
-<!-- <div class="jumbotron">
-    <h1 class="display-4">Bienvenidos!</h1>
-    <p class="lead">Centro de Innovación y Emprendimineto de Nicaragua</p>
-    <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-    </p>
-  </div> -->
+<app-header></app-header>
 
-<div class="container-fluid">
-    <div class="row">
-       <div class="container">
-        <div class="row">
-            <h2 class="text-center w-100 mb-3">BMS</h2>            
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <button class="btn btn-success mt-3" (click)="startEmpty()">Iniciar cuestionario</button>
-            </div>
-            <div class="col-md-3">
-                <button class="btn btn-primary mt-3" (click)="continueForm()">Retomar cuestionario</button>
+<div class="container-fluid h-100 nav-fix ">
+  
+    
+        <div class="row h-100 justify-content-center align-items-center d-flex flex-column">
+           
+                <button class="btn btn-success mt-3 btn-lg"  (click)="startEmpty()">Iniciar cuestionario</button>
+           
+                <button class="btn btn-primary mt-3 btn-lg" (click)="continueForm()">Retomar cuestionario</button>
             </div>
                 
             
-        </div>
-        <!-- <app-form *ngIf="showForm" [formData]="bmsData"></app-form> -->
-       </div>
-    </div>
+        
+  
 </div>
