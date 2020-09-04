@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-bms">
-    <a class="navbar-brand font-weight-bold" href="#">BMS</a>
+    <a class="navbar-brand font-weight-bold" (click)="navigate('inicio')">BMS</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -8,13 +8,7 @@
       <ul class="navbar-nav mr-auto">
         <li class="nav-item ">
           <a class="nav-link" (click)="navigate('inicio')">Inicio </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" (click)="navigate('general')">Datos Generales <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" (click)="navigate('parametros')">Parámetros</a>
-          </li>
+        </li>     
           <li class="nav-item">
             <a class="nav-link" (click)="navigate('ayuda')">Ayuda</a>
           </li>
@@ -23,7 +17,17 @@
           </li>
       
       </ul>           
-        <button class="btn btn-outline-success my-2 my-sm-0 " (click)="getReport()" *ngIf="canGenerateReport">Generar Informe</button>
+      <ul class="navbar-nav my-2 my-lg-0">
+      
+        <li class="nav-item">
+          <a class="nav-link" (click)="navigate('general')">Datos Generales <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" (click)="navigate('parametros')">Parámetros</a>
+          </li>         
+        </ul>
+        <button class="btn btn-success my-2 my-sm-0 ml-1" (click)="saveData()"><strong>Guardar Avance</strong></button>
+        <button class="btn btn-warning my-2 my-sm-0 ml-1" (click)="navigate('informe')" [disabled]="!canGenerateReport"><strong>Generar Informe</strong></button>
      
     </div>
   </nav>

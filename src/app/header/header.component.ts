@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommunicationService } from '../communication.service';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,8 @@ import { CommunicationService } from '../communication.service';
 export class HeaderComponent implements OnInit {
   canGenerateReport = false;
 
-  constructor(private comSerive: CommunicationService,) { }
+  constructor(private comSerive: CommunicationService,
+    private db : AngularFirestore) { }
 
   ngOnInit() {
     this.comSerive.sectionsCompleted.subscribe(data => {
@@ -22,12 +24,18 @@ export class HeaderComponent implements OnInit {
     this.comSerive.navigate(url);
   }
 
-  logout() {
-    alert('Sesión finalizada')
+  saveData(){
+    const formID = this.comSerive.getDataSession().idForm;
+
+    this.db.collection('informes').doc(formID).set(this.comSerive.getDataSession()).then( data => {
+      console.log(data)
+      console.log('Formulario Guardado')
+    })
   }
 
-  getReport() {
-    alert('Generando reporte....');
+  logout() {
+    this.comSerive.logOut();
+    this.comSerive.navigate('');
   }
 
 }

@@ -8,7 +8,7 @@ import { EventEmitter } from 'protractor';
   styleUrls: ['./sections.component.scss']
 })
 export class SectionsComponent implements OnInit {
-  selectedSection = "";
+  selectedSection: any;
   selectedParameter: any;
   sections: any;
   mainForm: any;
@@ -16,6 +16,10 @@ export class SectionsComponent implements OnInit {
   constructor(private communicationService: CommunicationService) { }
 
   ngOnInit() {
+    // if (!this.communicationService.isUserLogged()) {
+    //   this.communicationService.navigate('');
+    // };
+
     this.mainForm = this.communicationService.getDataSession();
     this.sections = this.mainForm.sections;
 

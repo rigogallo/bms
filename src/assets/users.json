@@ -1,0 +1,40 @@
+{
+    
+        "rigo.gallo@hotmail.com" : {
+            "name": "Rigoberto Gallo",
+            "pass": "1234"
+        },
+        "solorzanojoseluis03@gmail.com" : {
+            "name": "José Luis Solorzano",
+            "pass": "1234"
+        },
+        "silguadato@gmail.com" : {
+            "name": "Silvio Torrentes",
+            "pass": "silvio2020"
+        },
+        "ramon.a.parajon@uv.es" : {
+            "name": "Ramón Parajon",
+            "pass": "ramon2020"
+        },
+        "evelyng.martinezm@gmail.com" : {
+            "name": "Evelyng Martinez",
+            "pass": "evelyng2020"
+        },
+        "hmhowkingsm@yahoo.es" : {
+            "name": "Hazzsel Howkings",
+            "pass": "hazzel2020"
+        },
+        "alugodo@gmail.com" : {
+            "name": "Abel Largaespada",
+            "pass": "abel2020"
+        },
+        "emartinez59@hotmail.com" : {
+            "name": "Edgard Martinez",
+            "pass": "edgard2020"
+        },
+        "fundex1@gmail.com" :{
+            "name": "Danilo Sandoval",
+            "pass": "danilo2020"
+        }
+   
+}

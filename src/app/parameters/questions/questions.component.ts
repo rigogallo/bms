@@ -12,7 +12,11 @@ export class QuestionsComponent implements OnInit {
 
   constructor(private communicationService: CommunicationService) { }
 
-  ngOnInit() {  
+  ngOnInit() { 
+    if (!this.communicationService.isUserLogged()) {
+      this.communicationService.navigate('');
+    };
+     
     this.communicationService.parameterSelected.subscribe(data => {              
       this.selectedParameter = data.parameter;         
       this.selectedSection = data.selectedSection

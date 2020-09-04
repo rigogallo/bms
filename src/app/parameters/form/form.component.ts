@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import bmsParameters from "../../../assets/main.json";
 import { CommunicationService } from '../../communication.service';
 import { Router } from '@angular/router';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-form',
@@ -16,7 +17,8 @@ export class FormComponent implements OnInit {
   aceptUseConditions = false;
 
   constructor(private comSerive: CommunicationService,
-    private router: Router,) { }
+    private router: Router,
+    private db: AngularFirestore) { }
 
   ngOnInit() {    
     this.mainForm = this.comSerive.getDataSession();   
@@ -24,10 +26,19 @@ export class FormComponent implements OnInit {
     //this.comSerive.parameterSelected.emit({ parameter: this.sections[0].parameters[0], selectedSection: this.sections[0] });
   } 
 
-  userAceptUseConditions(){
+  userAceptUseConditions(){ 
     this.aceptUseConditions = !this.aceptUseConditions;
     this.mainForm.aceptUseConditions = this.aceptUseConditions;
-    this.comSerive.saveDataSession(this.mainForm);
+    this.mainForm.emailUsuario = this.comSerive.getUserSession()   
+
+    this.db.collection('informes').add(this.mainForm).then( data => {
+      this.mainForm.idForm = data.id;
+      this.comSerive.saveDataSession(this.mainForm);      
+      console.log('Formulario creado')
+    }).catch(err => {
+      console.log('Ocurrió un error: ', err);
+    })
+    
   }
 
   goSections() {    

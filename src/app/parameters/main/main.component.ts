@@ -1,8 +1,24 @@
 import { Component, OnInit, Output } from '@angular/core';
 import bmsParameters from "../../../assets/main.json";
+import bmsUsers from "../../../assets/users.json";
 import { CommunicationService } from '../../communication.service';
 import { debug } from 'util';
 import { Router } from '@angular/router';
+
+// import * as firebase from "firebase/app";
+
+// // Add the Firebase products that you want to use
+// import "firebase/auth";
+// import "firebase/firestore";
+
+// const firebaseConfig = {
+ 
+// };
+
+// firebase.initializeApp(firebaseConfig);
+// const db = firebase.firestore();
+// const settings = { timestampsInSnapshots: true};
+// db.settings(settings);
 
 @Component({
   selector: 'app-main',
@@ -11,7 +27,8 @@ import { Router } from '@angular/router';
 })
 export class MainComponent implements OnInit {
   showForm = false;
-  mainForm = bmsParameters;  
+  mainForm = bmsParameters; 
+  users = bmsUsers; 
   bmsData: any;
 
   constructor(
@@ -20,7 +37,9 @@ export class MainComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-   
+  //   db.collection("cuestionarios").add(this.mainForm).then(function() {
+  //     console.log("Document successfully written!");
+  // });
   }
 
   startEmpty(){
@@ -30,7 +49,7 @@ export class MainComponent implements OnInit {
 
   continueForm(){
     // this.showForm = true;
-    this.communicationService.navigate('general');
+    this.communicationService.navigate('cuestionarios');
     // this.bmsData = this.comSerive.getDataSession();
   }
 

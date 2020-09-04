@@ -12,6 +12,14 @@ import { FormsModule } from '@angular/forms';
 import { InformeComponent } from './parameters/informe/informe.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './auth/auth.guard';
+import { AyudaComponent } from './ayuda/ayuda.component';
+import { QuestionariesComponent } from './parameters/questionaries/questionaries.component';
+import {AngularFireModule} from '@angular/fire';
+import { environment } from '../environments/environment';
+import {AngularFireAuthModule} from '@angular/fire/auth';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
+import {AngularFireStorageModule} from '@angular/fire/storage';
 
 const appRoutes: Routes = [
   { path: 'form', component: FormComponent },  
@@ -32,14 +40,20 @@ const appRoutes: Routes = [
     InformeComponent,
     HeaderComponent,
     LoginComponent,
- 
+    AyudaComponent,
+    QuestionariesComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

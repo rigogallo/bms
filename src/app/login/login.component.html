@@ -7,12 +7,12 @@
                 </span>
 
                 <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
-                    <input class="input100" type="text" name="username" placeholder="Email">
+                    <input class="input100" type="text" name="username" placeholder="Email" [(ngModel)]="email">
                     <span class="focus-input100"></span>
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate = "Please enter password">
-                    <input class="input100" type="password" name="pass" placeholder="Contraseña">
+                    <input class="input100" type="password" name="pass" placeholder="Contraseña" [(ngModel)]="pass">
                     <span class="focus-input100"></span>
                 </div>
 
@@ -33,13 +33,12 @@
                 </div>
 
                 <div class="flex-col-c p-t-40 p-b-40">
-                    <!-- <span class="txt1 p-b-9">
-                        Don’t have an account?
-                    </span>
-
-                    <a href="#" class="txt3">
-                        Sign up now
-                    </a> -->
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert" *ngIf="loginFailed">
+                        <strong>Credenciales incorrectas!</strong> 
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true" (click)="loginFailed = !loginFailed">&times;</span>
+                        </button>
+                      </div>
                 </div>
             </form>
         </div>

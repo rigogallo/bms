@@ -5,7 +5,8 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class CommunicationService {
-  sessionStorageName = 'bmsData'
+  sessionStorageName = 'bmsData';
+  sessionStorageUser = 'bmsUser';
   sectionSelected: EventEmitter<any> = new EventEmitter();
   parameterSelected: EventEmitter<any> = new EventEmitter();
   questionChecked: EventEmitter<any> = new EventEmitter();
@@ -20,6 +21,18 @@ export class CommunicationService {
 
   getDataSession() {
     return JSON.parse(localStorage.getItem(this.sessionStorageName));
+  }
+
+  saveUserSession(email) {
+    localStorage.setItem(this.sessionStorageUser, email);
+  }
+
+  getUserSession() {
+    return localStorage.getItem(this.sessionStorageUser);
+  }
+
+  logOut() {
+    localStorage.removeItem(this.sessionStorageUser);
   }
 
   navigate(path) {
@@ -61,5 +74,9 @@ export class CommunicationService {
     }
     
     return style;
+  }
+
+  isUserLogged(){
+    return this.getUserSession() == undefined ? false : true;
   }
 }

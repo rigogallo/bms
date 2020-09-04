@@ -16,6 +16,7 @@ export class InformeComponent implements OnInit {
   ngOnInit() {
     this.mainForm = this.communicationService.getDataSession();
     this.result = JSON.stringify(this.mainForm);
+    this.sendEmail();
   }
 
   getColor(grade) {
@@ -26,4 +27,7 @@ export class InformeComponent implements OnInit {
     this.communicationService.navigate('sections');    
   }
 
+  sendEmail() {
+   
+  }
 }
