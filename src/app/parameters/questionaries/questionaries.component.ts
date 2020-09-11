@@ -24,6 +24,10 @@ export class QuestionariesComponent implements OnInit {
   ngOnInit() {  
     this.loadReportsDataByUser()
   }
+
+  createNew() {
+    this.reportService.getNewReport();
+  }
   
   deleteReport(reportID) {
     const res = this.reportService.deleteReportByID(reportID);

@@ -20,6 +20,8 @@ import { environment } from '../environments/environment';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {AngularFireStorageModule} from '@angular/fire/storage';
+import { ReportNavComponent } from './report-nav/report-nav.component';
+import { UsersComponent } from './admin/users/users.component';
 
 const appRoutes: Routes = [
   { path: 'form', component: FormComponent },  
@@ -42,6 +44,8 @@ const appRoutes: Routes = [
     LoginComponent,
     AyudaComponent,
     QuestionariesComponent,
+    ReportNavComponent,
+    UsersComponent,
     
   ],
   imports: [

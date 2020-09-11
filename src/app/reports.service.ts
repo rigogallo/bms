@@ -4,13 +4,17 @@ import { first, map } from 'rxjs/operators';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { convertSnaps } from './utils'
 import { Informe } from './models/informe.model';
+import bmsParameters from "../assets/main.json";
+import { CommunicationService } from './communication.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ReportsService {
+mainForm = bmsParameters;
 
-  constructor(private db: AngularFirestore) { }
+  constructor(private db: AngularFirestore,
+    private comService: CommunicationService) { }
 
   getReportsByUser(userEmail: string): Observable<Informe[]> {
     return this.db.collection(
@@ -34,18 +38,8 @@ export class ReportsService {
     )
   }
 
-  // getReportsByUser(userEmail: string): Observable<Informe[]> | any {        
-  //   return this.db.collection('informes',
-  //   ref=> ref.where("emailUsuario", "==", userEmail))
-  //   .snapshotChanges().pipe(
-  //     map(
-  //       snaps => {
-  //         snaps.map(snap => {                     
-  //               return convertSnaps<Informe>(snaps); 
-  //         }            
-  //         )
-  //         }
-  //     ), first()
-  //    )
-  //     }    
+  getNewReport(){
+    this.comService.saveDataSession(this.mainForm)
+    this.comService.navigate('general');
+}   
 }  

@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Output, OnDestroy, HostListener } from '@angular/core';
 import { CommunicationService } from '../../communication.service';
 import { EventEmitter } from 'protractor';
 
@@ -14,6 +14,8 @@ export class SectionsComponent implements OnInit {
   mainForm: any;
 
   constructor(private communicationService: CommunicationService) { }
+
+
 
   ngOnInit() {
     // if (!this.communicationService.isUserLogged()) {
@@ -35,6 +37,13 @@ export class SectionsComponent implements OnInit {
     this.communicationService.questionNotesAdded.subscribe(data => {
       this.updateNotes(data);
     });
+
+    this.communicationService.savedClicked.subscribe(() => {
+      console.log('Saving from Sections')
+      this.communicationService.saveDataSession(this.mainForm);
+      this.communicationService.saveFormData();
+    }
+    )
   }
 
   updateNotes(data) {

@@ -4,18 +4,16 @@ import bmsUsers from "../../../assets/users.json";
 import { CommunicationService } from '../../communication.service';
 import { debug } from 'util';
 import { Router } from '@angular/router';
+import { environment} from '../../../environments/environment'
 
 // import * as firebase from "firebase/app";
 
-// // Add the Firebase products that you want to use
+// //Add the Firebase products that you want to use
 // import "firebase/auth";
 // import "firebase/firestore";
+// import "firebase-admin"
 
-// const firebaseConfig = {
- 
-// };
-
-// firebase.initializeApp(firebaseConfig);
+// firebase.initializeApp(environment.firebaseConfig);
 // const db = firebase.firestore();
 // const settings = { timestampsInSnapshots: true};
 // db.settings(settings);
@@ -36,7 +34,7 @@ export class MainComponent implements OnInit {
     private router: Router
     ) { }
 
-  ngOnInit() {
+  ngOnInit() {    
   //   db.collection("cuestionarios").add(this.mainForm).then(function() {
   //     console.log("Document successfully written!");
   // });

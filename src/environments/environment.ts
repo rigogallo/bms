@@ -13,7 +13,9 @@ export const environment = {
     messagingSenderId: "558405770760",
     appId: "1:558405770760:web:13ccdfdb6ae0cb6972fbbd",
     measurementId: "G-YVNQBB04JX"
-  }
+  },
+  GOOGLE_APPLICATION_CREDENTIALS : "C:\Users\Rigo\Downloads\bms-app-6e21d-firebase-adminsdk-x83cl-5ff8d74cce.json"
+  
 };
 
 /*

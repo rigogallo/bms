@@ -1,62 +1,60 @@
 <app-header></app-header>
-
-<div class="container-fluid nav-fix">
+<app-report-nav></app-report-nav>
+<div class="container-fluid mt-1 nav-fix">
     <div class="row pt-4  w-100">
         <div class="col-12 text-center">
             <h4>Evaluación de la empresa: {{ this.mainForm.companyName }}</h4>
         </div>
-     <div class="container d-flex justify-content-center">
-        <nav aria-label="Page navigation example">
-            <!-- <div class="btn m-2 btn-outline-secondary">
+        <div class="container d-flex justify-content-center">
+            <nav aria-label="Page navigation example">
+                <!-- <div class="btn m-2 btn-outline-secondary">
                 <a class="" (click)="loadGeneralData()"> Datos Generales</a>
             </div>    -->
-            <div *ngFor="let section of sections" class="btn m-1" [ngClass]="getColor(section)">
-                <a class="" (click)="loadSection(section)"> {{section.name}}</a>
-            </div>
-         
-        </nav>
-     </div>
+                <div *ngFor="let section of sections" class="btn m-1" [ngClass]="getColor(section)">
+                    <a class="" (click)="loadSection(section)"> {{section.name}}</a>
+                </div>
+
+            </nav>
+        </div>
     </div>
 
     <div class="row" *ngIf="selectedSection">
         <div class="container parameter-container w-100 ">
-         <div class="parameter-title mt-4">
-           <span>{{selectedSection.name}}</span>
-         </div>
+            <div class="parameter-title mt-4">
+                <span>{{selectedSection.name}}</span>
+            </div>
 
-         <p class="mt-4">{{selectedSection.description}}</p>
-           
-         <div class="row pt-1 d-flex justify-content-center">
-             <div class="col-sm-12">
-                 <h5 class="text-center">Parámetros</h5></div>
-             <nav aria-label="Page navigation example">                              
-                 <div *ngFor="let parameter of selectedSection.parameters" class="btn m-1" 
-                 [ngClass]="{
+            <p class="mt-4">{{selectedSection.description}}</p>
+
+            <div class="row pt-1 d-flex justify-content-center">
+                <div class="col-sm-12">
+                    <h5 class="text-center">Parámetros</h5>
+                </div>
+                <nav aria-label="Page navigation example">
+                    <div *ngFor="let parameter of selectedSection.parameters" class="btn m-1" [ngClass]="{
                      'btn-outline-secondary': parameter.completed == false,
                      'btn-success': parameter.completed && parameter.parameterGrade >= 2.33,
                      'btn-warning': parameter.completed && (parameter.parameterGrade > 1.66 &&  2.33 > parameter.parameterGrade),
                      'btn-danger': parameter.completed && (parameter.parameterGrade <= 1.66)
-                   }" >
-                     <a class="" (click)="loadParameter(parameter)"> {{parameter.name}}</a>
-                 </div>
-             </nav>
-         </div>
+                   }">
+                        <a class="" (click)="loadParameter(parameter)"> {{parameter.name}}</a>
+                    </div>
+                </nav>
+            </div>
 
-         <div class="row " >
-             <div class="container">
-                 <app-questions></app-questions>
-             </div>
-             
-         </div> 
-        
-        
+            <div class="row ">
+                <div class="container">
+                    <app-questions></app-questions>
+                </div>
+
+            </div>
+
+
         </div>
-      
+
     </div>
 
     <!-- <div class="text-center w-100 p-5">
         <button class="btn btn-primary" (click)="goToReport()">Ver Informe</button>
      </div> -->
 </div>
-
-

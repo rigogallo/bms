@@ -34,7 +34,8 @@ export class HeaderComponent implements OnInit {
   }
 
   logout() {
-    this.comSerive.logOut();
+    this.comSerive.signOut();
+    // this.comSerive.logOut();
     this.comSerive.navigate('');
   }
 

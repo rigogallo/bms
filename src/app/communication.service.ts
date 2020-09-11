@@ -1,5 +1,17 @@
-import { Injectable, EventEmitter } from '@angular/core';
+import { Injectable, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { environment} from '../environments/environment'
+import * as firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
+import "firebase-admin"
+
+firebase.initializeApp(environment.firebaseConfig);
+const db = firebase.firestore();
+const settings = { timestampsInSnapshots: true};
+db.settings(settings);
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +24,16 @@ export class CommunicationService {
   questionChecked: EventEmitter<any> = new EventEmitter();
   questionNotesAdded: EventEmitter<any> = new EventEmitter();
   sectionsCompleted: EventEmitter<any> = new EventEmitter();
+  saveForm: EventEmitter<void> = new EventEmitter();
+  savedClicked: EventEmitter<void> = new EventEmitter();
   
-  constructor(private router: Router) { }
+  constructor(private router: Router,    
+    private db: AngularFirestore,
+    private afAuth: AngularFireAuth) {
+    // this.saveForm.subscribe(
+    //   this.saveFormData()
+    // )
+   }
 
   saveDataSession(data){
     localStorage.setItem(this.sessionStorageName, JSON.stringify(data));
@@ -27,8 +47,20 @@ export class CommunicationService {
     localStorage.setItem(this.sessionStorageUser, email);
   }
 
+  saveFormData(){
+    const formID = this.getDataSession().idForm;    
+    this.db.collection('informes').doc(formID).set(this.getDataSession()).then( data => {      
+      console.log('Formulario Guardado')
+    })
+  }
+
   getUserSession() {
     return localStorage.getItem(this.sessionStorageUser);
+  }
+
+  signOut() {
+    this.afAuth.auth.signOut();    
+    this.logOut();
   }
 
   logOut() {

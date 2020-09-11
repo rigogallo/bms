@@ -8,16 +8,18 @@ import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './auth/auth.guard';
 import { AyudaComponent } from './ayuda/ayuda.component';
 import { QuestionariesComponent } from './parameters/questionaries/questionaries.component';
+import { UsersComponent } from './admin/users/users.component';
 
 
 const routes: Routes = [
   { path: '', component: LoginComponent},
-  { path: 'inicio', component: MainComponent,  canActivate: [AuthGuard]},
+  { path: 'inicio', component: QuestionariesComponent,  canActivate: [AuthGuard]},
   { path: 'general', component: FormComponent,  canActivate: [AuthGuard]},  
   { path: 'parametros', component: SectionsComponent,  canActivate: [AuthGuard]},    
   { path: 'cuestionarios', component: QuestionariesComponent,  canActivate: [AuthGuard]},    
   { path: 'informe', component: InformeComponent,  canActivate: [AuthGuard]},  
   { path: 'ayuda', component: AyudaComponent,  canActivate: [AuthGuard]},  
+  { path: 'admin/usuarios', component: UsersComponent,  canActivate: [AuthGuard]},  
   { path: 'login', component: LoginComponent, },  
   
   

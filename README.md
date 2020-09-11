@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Bms
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.24.
@@ -29,4 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 =======
 # bms
 BMS App
->>>>>>> 19ee064c419fc184cae727c52627b57a4e2f74cd
+
