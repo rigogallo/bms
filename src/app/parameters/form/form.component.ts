@@ -33,7 +33,7 @@ export class FormComponent implements OnInit {
   userAceptUseConditions(){ 
     this.aceptUseConditions = !this.aceptUseConditions;
     this.mainForm.aceptUseConditions = this.aceptUseConditions;
-    this.mainForm.emailUsuario = this.comSerive.getUserSession()           
+    this.mainForm.emailUsuario = this.comSerive.getUserSession().email           
   }
 
   save() {

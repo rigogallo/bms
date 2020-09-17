@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,25 +16,26 @@ import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './auth/auth.guard';
 import { AyudaComponent } from './ayuda/ayuda.component';
 import { QuestionariesComponent } from './parameters/questionaries/questionaries.component';
-import {AngularFireModule} from '@angular/fire';
+import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
-import {AngularFireAuthModule} from '@angular/fire/auth';
-import {AngularFirestoreModule} from '@angular/fire/firestore';
-import {AngularFireStorageModule} from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 import { ReportNavComponent } from './report-nav/report-nav.component';
 import { UsersComponent } from './admin/users/users.component';
+import { HttpClientModule } from "@angular/common/http";
 
 const appRoutes: Routes = [
-  { path: 'form', component: FormComponent },  
+  { path: 'form', component: FormComponent },
   // { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
   declarations: [
     // RouterModule.forRoot(
-		// 	appRoutes,
-		// 	{ enableTracing: false } // <-- debugging purposes only
-		//  ),
+    // 	appRoutes,
+    // 	{ enableTracing: false } // <-- debugging purposes only
+    //  ),
     AppComponent,
     MainComponent,
     SectionsComponent,
@@ -46,16 +48,17 @@ const appRoutes: Routes = [
     QuestionariesComponent,
     ReportNavComponent,
     UsersComponent,
-    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    NgbModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

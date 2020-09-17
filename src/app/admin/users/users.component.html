@@ -1,1 +1,149 @@
-<p>users works!</p>
+<app-header></app-header>
+<div class="container-fluid mt-3 nav-fix">
+    <div class="row">
+        <div class="container">
+            <h4>Usuarios</h4>
+            <hr>
+
+            <div class="row justify-content-center" *ngIf="isLoading">
+                <td colspan="4" class="text-center pt-5">
+                    <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </td>
+            </div>
+            <div class="row" *ngIf="!isLoading">
+                <div class="col-12 mb-3 justify-content-end text-right">
+                    <button class="btn btn-success" (click)="openNewUserModal(createUserModal)">Crear Usuario</button>
+                </div>
+
+                <div class="col-12">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Correo</th>
+                                <th scope="col">Administrador</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let user of users; let i = index">
+                                <th scope="row">{{ i + 1}}</th>
+                                <td>{{ user.name}}</td>
+                                <td>{{ user.email}}</td>
+                                <td>{{ user.isAdmin ? 'Admin' : 'Consultor' }}</td>
+                                <td>
+                                    <button class="btn btn-warning font-weight-bold">Editar</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-danger font-weight-bold" (click)="deleteUserFunc(user)">Eliminar</button>
+                                </td>
+                            </tr>
+                            <tr *ngIf="users.length == 0">
+                                <td colspan="6" class="text-center">
+                                    <p><strong>No hay usuarios registrados</strong></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<ng-template #createUserModal let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">Crear Usuario</h4>
+        <!-- <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button> -->
+    </div>
+    <div class="modal-body">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="exampleInputNombre">Nombre</label>
+                        <input type="email" class="form-control" id="exampleInputNombre" [(ngModel)]="user.name"
+                            aria-describedby="emailHelp" placeholder="Nombre del consultor">
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Correo electrónico</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="user.email"
+                            aria-describedby="emailHelp" placeholder="Correo electrónico">
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Contraseña</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="user.password"
+                            placeholder="Password">
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" [(ngModel)]="user.isAdmin"
+                            [checked]="user.isAdmin">
+                        <label class="form-check-label" for="exampleCheck1">Es Admin</label>
+                    </div>
+                    <button type="button" class="btn btn-primary" (click)="createNew()">Crear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-light" (click)="closeForm()">Cerrar</button>
+    </div>
+</ng-template>
+
+<ng-template #deleteUserModal let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">Eliminar Usuario</h4>
+        <!-- <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button> -->
+    </div>
+    <div class="modal-body">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="exampleInputNombre">Nombre</label>
+                        <input type="email" class="form-control" id="exampleInputNombre" [(ngModel)]="user.name"
+                            aria-describedby="emailHelp" placeholder="Nombre del consultor">
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Correo electrónico</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="user.email"
+                            aria-describedby="emailHelp" placeholder="Correo electrónico">
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Contraseña</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="user.password"
+                            placeholder="Password">
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" [(ngModel)]="user.isAdmin"
+                            [checked]="user.isAdmin">
+                        <label class="form-check-label" for="exampleCheck1">Es Admin</label>
+                    </div>
+                    <button type="button" class="btn btn-primary" (click)="createNew()">Crear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-light" (click)="closeForm()">Cerrar</button>
+    </div>
+</ng-template>

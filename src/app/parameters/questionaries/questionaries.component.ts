@@ -36,7 +36,7 @@ export class QuestionariesComponent implements OnInit {
   
   loadReportsDataByUser(){    
     this.loading = true;      
-    this.reports$ = this.reportService.getReportsByUser(this.comService.getUserSession()).pipe(finalize(() => this.loading = false))
+    this.reports$ = this.reportService.getReportsByUser(this.comService.getUserSession().email).pipe(finalize(() => this.loading = false))
     this.reports$.subscribe(data => {
       this.reports = data;
     })

@@ -27,7 +27,7 @@ mainForm = bmsParameters;
 
   async deleteReportByID(reportID: string) {
    
-    return await this.db.collection('informes').doc(reportID).delete().then(() => {return true}).catch(() => false);        
+    return await this.db.collection('informes').doc(reportID).delete().then(() => {return true}).catch(() => {return false});        
   }
 
   getReportByID(reportID: string) {

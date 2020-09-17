@@ -3,15 +3,16 @@ import { Router } from '@angular/router';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { environment} from '../environments/environment'
-import * as firebase from "firebase/app";
-import "firebase/auth";
-import "firebase/firestore";
-import "firebase-admin"
+import { User, UserI } from './models/user.model';
+// import * as firebase from "firebase/app";
+// import "firebase/auth";
+// import "firebase/firestore";
+// import "firebase-admin"
 
-firebase.initializeApp(environment.firebaseConfig);
-const db = firebase.firestore();
-const settings = { timestampsInSnapshots: true};
-db.settings(settings);
+// firebase.initializeApp(environment.firebaseConfig);
+// const db = firebase.firestore();
+// const settings = { timestampsInSnapshots: true};
+// db.settings(settings);
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +27,7 @@ export class CommunicationService {
   sectionsCompleted: EventEmitter<any> = new EventEmitter();
   saveForm: EventEmitter<void> = new EventEmitter();
   savedClicked: EventEmitter<void> = new EventEmitter();
+  userLogged: EventEmitter<void> = new EventEmitter();
   
   constructor(private router: Router,    
     private db: AngularFirestore,
@@ -43,19 +45,20 @@ export class CommunicationService {
     return JSON.parse(localStorage.getItem(this.sessionStorageName));
   }
 
-  saveUserSession(email) {
-    localStorage.setItem(this.sessionStorageUser, email);
+  saveUserSession(user) {
+    localStorage.setItem(this.sessionStorageUser, JSON.stringify(user));
   }
 
   saveFormData(){
     const formID = this.getDataSession().idForm;    
-    this.db.collection('informes').doc(formID).set(this.getDataSession()).then( data => {      
-      console.log('Formulario Guardado')
+    this.db.collection('informes').doc(formID).set(this.getDataSession()).then( data => {            
     })
   }
 
-  getUserSession() {
-    return localStorage.getItem(this.sessionStorageUser);
+
+
+  getUserSession() : UserI {
+    return JSON.parse(localStorage.getItem(this.sessionStorageUser));
   }
 
   signOut() {

@@ -9,6 +9,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class HeaderComponent implements OnInit {
   canGenerateReport = false;
+  isAdmin: boolean = false;
 
   constructor(private comSerive: CommunicationService,
     private db : AngularFirestore) { }
@@ -18,6 +19,7 @@ export class HeaderComponent implements OnInit {
       this.canGenerateReport = data;
     });
     this.canGenerateReport = this.comSerive.getDataSession().sectionsCompleted; 
+    this.isAdmin = this.comSerive.getUserSession().isAdmin;
   }
 
   navigate(url) {    

@@ -13,6 +13,9 @@
             <a class="nav-link" (click)="navigate('ayuda')">Ayuda</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" (click)="navigate('admin/usuarios')" *ngIf="isAdmin">Usuarios</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" (click)="logout()">Cerrar Sesión</a>
           </li>
       
